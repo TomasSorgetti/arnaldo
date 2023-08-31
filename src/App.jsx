@@ -6,6 +6,7 @@ import Elaboracion from "../src/pages/Elaboracion/Elaboracion";
 import Historia from "../src/pages/Historia/Historia";
 import Sabores from "../src/pages/Sabores/Sabores";
 import Sucursales from "../src/pages/Sucursales/Sucursales";
+import Footer from "./components/Footer/Footer";
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/sabores" element={<Sabores />} />
         <Route path="/sucursales" element={<Sucursales />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

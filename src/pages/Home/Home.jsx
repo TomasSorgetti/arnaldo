@@ -4,6 +4,8 @@ import sabores from "../../assets/home/cards/sabores.png";
 import sucursales from "../../assets/home/cards/sucursales.png";
 import historia from "../../assets/home/cards/historia.png";
 import ArrowIcon from "../../assets/ArrowIcon.svg";
+import Reseñas from "../../components/Reseñas/Reseñas";
+
 const Home = () => {
   const pages = [
     {
@@ -48,6 +50,7 @@ const Home = () => {
           </Link>
         ))}
       </section>
+      <Reseñas/>
     </main>
   );
 };
