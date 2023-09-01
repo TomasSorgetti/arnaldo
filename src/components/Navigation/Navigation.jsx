@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import HeladoLogo from "../../assets/logo/HeladoLogo.png"
-import Logo from "../../assets/logo/Logo.png"
+import HeladoLogo from "../../assets/logo/HeladoLogo.png";
+import Logo from "../../assets/logo/Logo.png";
+import iconDown from "../../assets/iconDown.png";
+
 const Navigation = () => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const handleClick = () => {
     setNav(!nav);
+  };
+  const handleClickNavigate = () => {
+    setNav(!nav);
+    setDropdown(false);
   };
   const handleDropdown = () => {
     setDropdown(!dropdown);
@@ -16,48 +22,82 @@ const Navigation = () => {
       id="navbar"
       className="flex items-center justify-between flex-wrap px-2 lg:flex-row"
     >
-      <Link to="/" className="flex items-center gap-2">
+      <Link
+        onClick={handleClickNavigate}
+        to="/"
+        className="flex items-center gap-2 py-3"
+      >
         <img src={HeladoLogo} alt="logo 1" />
         <img src={Logo} alt="logo 2" />
       </Link>
       <div className="block lg:hidden">
         <button
           onClick={handleClick}
-          className="flex items-center px-3 py-2 border rounded"
+          className={`relative flex flex-col justify-center gap-[4px]`}
         >
-          <svg
-            className="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
+          <div
+            className={`w-5 h-[2px] bg-white ${
+              nav ? "rotate-45 absolute" : ""
+            }`}
+          ></div>
+          <div className={`w-5 h-[2px] bg-white ${nav ? "hidden" : ""}`}></div>
+          <div
+            className={`w-5 h-[2px] bg-white ${
+              nav ? "rotate-[-45deg]" : ""
+            }`}
+          ></div>
         </button>
       </div>
       <div
-        className={`w-auto font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-auto lg:pr-10${
+        className={`w-full h-screen font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-auto lg:pr-10${
           !nav ? " hidden" : ""
         }`}
       >
-        <ul className="absolute left-0 top-10 flex  items-start px-6 flex-col justify-center gap-2 lg:flex lg:flex-row lg:gap-4 ">
-          <li>
-            <button type="button" onClick={handleDropdown}>
-              NUESTRO HELADO
+        <ul
+          className={`absolute w-full text-[1.25rem] font-normal bg-black text-white left-0 top-10 flex  items-start px-6 flex-col justify-center gap-2 lg:flex lg:flex-row lg:gap-4 ${
+            nav ? "border-t-2 border-white" : ""
+          }`}
+        >
+          <li className="w-full border-b py-3">
+            <button
+              className="w-full pr-1 flex justify-between"
+              type="button"
+              onClick={handleDropdown}
+            >
+              <p>NUESTRO HELADO</p>
+              <img
+                className={`${dropdown ? "rotate-180" : ""}`}
+                src={iconDown}
+                alt="icon down"
+              />
             </button>
-            <ul className={`${!dropdown ? " hidden" : ""}`}>
-              <Link to="/sabores">Sabores</Link>
-              <Link to="/elaboracion">Elaboración</Link>
+            <ul
+              className={`flex flex-col gap-1 pl-2 py-3 text-[1rem] font-normal ${
+                !dropdown ? " hidden" : ""
+              }`}
+            >
+              <Link onClick={handleClickNavigate} to="/sabores">
+                Sabores
+              </Link>
+              <Link onClick={handleClickNavigate} to="/elaboracion">
+                Elaboración
+              </Link>
             </ul>
           </li>
-          <li>
-            <Link to="/sucursales">SUCURSALES</Link>
+          <li className="w-full border-b py-3">
+            <Link onClick={handleClickNavigate} to="/sucursales">
+              SUCURSALES
+            </Link>
           </li>
-          <li>
-            <Link to="/historia">HISTORIA</Link>
+          <li className="w-full border-b py-3">
+            <Link onClick={handleClickNavigate} to="/historia">
+              HISTORIA
+            </Link>
           </li>
-          <li>
-            <Link to="/contacto">CONTACTO</Link>
+          <li className="w-full border-b py-3">
+            <Link onClick={handleClickNavigate} to="/contacto">
+              CONTACTO
+            </Link>
           </li>
         </ul>
       </div>
