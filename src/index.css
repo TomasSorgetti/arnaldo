@@ -6,4 +6,13 @@
 body{
     background-color: black;
     color: white;
+    overflow-x: hidden;
+}
+.menuClose{
+    transform: translateX(100%);
+    transition: 400ms;
+}
+.menuOpen{
+    transform: translateX(0);
+    transition: 400ms;
 }

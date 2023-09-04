@@ -17,18 +17,11 @@ const Navigation = () => {
     setDropdown(!dropdown);
   };
   return (
-    <nav
-      id="navbar"
-      className="flex items-center justify-between flex-wrap pr-4 lg:flex-row"
-    >
-      <Link
-        onClick={handleClickNavigate}
-        to="/"
-        className=""
-      >
+    <nav id="navbar" className="flex items-center justify-between relative">
+      <Link onClick={handleClickNavigate} to="/" className="">
         <img className="h-14" src={Logo} alt="logo" />
       </Link>
-      <div className="block lg:hidden">
+      <div className="block lg:hidden pr-4">
         <button
           onClick={handleClick}
           className={`relative flex flex-col justify-center gap-[4px]`}
@@ -40,19 +33,17 @@ const Navigation = () => {
           ></div>
           <div className={`w-5 h-[2px] bg-white ${nav ? "hidden" : ""}`}></div>
           <div
-            className={`w-5 h-[2px] bg-white ${
-              nav ? "rotate-[-45deg]" : ""
-            }`}
+            className={`w-5 h-[2px] bg-white ${nav ? "rotate-[-45deg]" : ""}`}
           ></div>
         </button>
       </div>
       <div
-        className={`w-full h-screen font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-auto lg:pr-10${
-          !nav ? " hidden" : ""
+        className={`absolute z-10 top-[56px] w-screen font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center justify-start${
+          !nav ? " menuClose" : " menuOpen"
         }`}
       >
         <ul
-          className={`absolute w-full text-[1.25rem] font-normal bg-black text-white left-0 top-14 flex  items-start px-4 flex-col justify-center gap-2 lg:flex lg:flex-row lg:gap-4 ${
+          className={`w-full h-screen text-[1.25rem] font-normal bg-black text-white left-0 top-14 flex  items-start px-4 flex-col justify-start gap-2 ${
             nav ? "border-t-2 border-white" : ""
           }`}
         >
