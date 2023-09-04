@@ -27,7 +27,7 @@ const Home = () => {
     },
   ];
   return (
-    <main className="font-heebo">
+    <main className="font-heebo pt-[56px]">
       <article className="w-full">
         <video autoPlay muted>
           <source src={Video} type="video/mp4"></source>

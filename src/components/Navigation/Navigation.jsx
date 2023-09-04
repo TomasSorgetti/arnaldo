@@ -17,7 +17,7 @@ const Navigation = () => {
     setDropdown(!dropdown);
   };
   return (
-    <nav id="navbar" className="flex items-center justify-between relative">
+    <nav id="navbar" className="flex items-center justify-between fixed z-10 bg-black w-full">
       <Link onClick={handleClickNavigate} to="/" className="">
         <img className="h-14" src={Logo} alt="logo" />
       </Link>

@@ -6,13 +6,13 @@
 body{
     background-color: black;
     color: white;
-    overflow-x: hidden;
+    overflow-x:clip;
 }
 .menuClose{
     transform: translateX(100%);
-    transition: 400ms;
+    transition: 500ms;
 }
 .menuOpen{
     transform: translateX(0);
-    transition: 400ms;
+    transition: 500ms;
 }
