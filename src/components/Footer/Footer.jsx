@@ -1,12 +1,10 @@
-import HeladoLogo from "../../assets/logo/HeladoLogo.png"
-import Logo from "../../assets/logo/Logo.png"
+import HeladoLogo from "../../assets/images/logo/imagotipo_sin_fondo.png"
 import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <section className="text-center flex flex-col gap-4 p-4">
-      <Link to="/" className="flex flex-col items-center gap-2">
-        <img className='' src={HeladoLogo} alt="logo 1" />
-        <img src={Logo} alt="logo 2" />
+      <Link to="/" className="flex justify-center">
+        <img className='h-24' src={HeladoLogo} alt="logo 1" />
       </Link>
       <article className="flex flex-col gap-4">
         <div className="font-semibold">

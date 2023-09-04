@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import HeladoLogo from "../../assets/logo/HeladoLogo.png";
-import Logo from "../../assets/logo/Logo.png";
-import iconDown from "../../assets/iconDown.png";
+import Logo from "../../assets/images/logo/imagotipo_bar_top_sin_fondo.png";
+import iconDown from "../../assets/images/iconos/iconos_menu/down-chevron.png";
 
 const Navigation = () => {
   const [nav, setNav] = useState(false);
@@ -20,15 +19,14 @@ const Navigation = () => {
   return (
     <nav
       id="navbar"
-      className="flex items-center justify-between flex-wrap px-2 lg:flex-row"
+      className="flex items-center justify-between flex-wrap pr-4 lg:flex-row"
     >
       <Link
         onClick={handleClickNavigate}
         to="/"
-        className="flex items-center gap-2 py-3"
+        className=""
       >
-        <img src={HeladoLogo} alt="logo 1" />
-        <img src={Logo} alt="logo 2" />
+        <img className="h-14" src={Logo} alt="logo" />
       </Link>
       <div className="block lg:hidden">
         <button
@@ -54,19 +52,19 @@ const Navigation = () => {
         }`}
       >
         <ul
-          className={`absolute w-full text-[1.25rem] font-normal bg-black text-white left-0 top-10 flex  items-start px-6 flex-col justify-center gap-2 lg:flex lg:flex-row lg:gap-4 ${
+          className={`absolute w-full text-[1.25rem] font-normal bg-black text-white left-0 top-14 flex  items-start px-4 flex-col justify-center gap-2 lg:flex lg:flex-row lg:gap-4 ${
             nav ? "border-t-2 border-white" : ""
           }`}
         >
           <li className="w-full border-b py-3">
             <button
-              className="w-full pr-1 flex justify-between"
+              className="w-full pr-1 flex justify-between items-center"
               type="button"
               onClick={handleDropdown}
             >
               <p>NUESTRO HELADO</p>
               <img
-                className={`${dropdown ? "rotate-180" : ""}`}
+                className={`h-4 ${dropdown ? "rotate-180" : ""}`}
                 src={iconDown}
                 alt="icon down"
               />
