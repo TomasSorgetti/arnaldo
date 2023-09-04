@@ -12,11 +12,11 @@ const Reseñas = () => {
 
   return (
     <div className="bg-white text-black p-4 pr-0 relative">
-      <h3 className="font-black text-2xl flex justify-between w-full items-center mb-8">
+      <h3 className="font-black text-[2rem] flex justify-between w-full items-center">
         <p>Nuestros Clientes</p>
-        <img className="h-10" src={pngwing} alt="" />
+        <img className="h-20" src={pngwing} alt="" />
       </h3>
-      <p className="text-sm mt-[-30px] font-normal mb-6">
+      <p className="text-[1rem] mt-[-10px] font-normal mb-6">
         Opiniones de Tripadvisor
       </p>
       <motion.div
@@ -25,7 +25,7 @@ const Reseñas = () => {
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
-          className="w-full flex gap-2 relative "
+          className="w-full h-[300px] flex gap-2 relative "
           drag="x"
           dragConstraints={{right:0,left:-width}}
         >
