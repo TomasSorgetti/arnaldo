@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
         textColor: "#FFF",
+        buttonColor: "#322F2F",
       },
       fontFamily: {
         heebo: ["Heebo"],
