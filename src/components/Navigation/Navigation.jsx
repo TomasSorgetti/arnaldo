@@ -10,7 +10,7 @@ const Navigation = () => {
     setNav(!nav);
   };
   const handleClickNavigate = () => {
-    setNav(!nav);
+    setNav(false);
     setDropdown(false);
   };
   const handleDropdown = () => {

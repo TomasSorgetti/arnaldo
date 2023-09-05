@@ -3,7 +3,7 @@ import {
 } from "../actions/actionTypes"
 import saboresList from "./list"
 const initialState = {
-  data: { action: "ver todos", filtred: saboresList },
+  data: {},
 };
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {

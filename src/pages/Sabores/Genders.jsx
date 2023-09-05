@@ -9,6 +9,7 @@ const Genders = () => {
     const [active, setActive] = useState(0);
 
     useEffect(() => {
+        dispatch(changeData("ver todos"));
       setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
     }, []);
 
