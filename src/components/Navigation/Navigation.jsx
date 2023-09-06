@@ -17,7 +17,9 @@ const Navigation = () => {
     setDropdown(!dropdown);
   };
   return (
-    <nav id="navbar" className="flex items-center justify-between fixed z-10 bg-black w-full">
+    <nav
+      id="navbar"
+      className={`flex items-center justify-between z-10 bg-black w-full ${nav?"fixed":""}`}  >
       <Link onClick={handleClickNavigate} to="/" className="">
         <img className="h-14" src={Logo} alt="logo" />
       </Link>
@@ -28,17 +30,17 @@ const Navigation = () => {
         >
           <div
             className={`w-5 h-[2px] bg-white ${
-              nav ? "rotate-45 absolute" : ""
+              nav ? "rotate-45 absolute toggle" : ""
             }`}
           ></div>
           <div className={`w-5 h-[2px] bg-white ${nav ? "hidden" : ""}`}></div>
           <div
-            className={`w-5 h-[2px] bg-white ${nav ? "rotate-[-45deg]" : ""}`}
+            className={`w-5 h-[2px] bg-white ${nav ? "rotate-[-45deg] toggle" : ""}`}
           ></div>
         </button>
       </div>
       <div
-        className={`absolute z-10 top-[56px] w-screen font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center justify-start${
+        className={`fixed z-10 top-[56px] w-screen font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center justify-start${
           !nav ? " menuClose" : " menuOpen"
         }`}
       >
