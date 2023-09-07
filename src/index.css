@@ -17,5 +17,5 @@ body{
     transition: 500ms;
 }
 .toggle{
-    transition: 0.15s ease-out;
+    transition: 0.15s ease-in;
 }

@@ -8,7 +8,7 @@ import ArrowIcon from "../../assets/images/iconos/iconos_cards_home/chevron_righ
 import Reseñas from "../../components/Reseñas/Reseñas";
 
 
-const Home = () => {
+const Home = ({ toggle }) => {
   const pages = [
     {
       name: "SABORES",
@@ -27,7 +27,7 @@ const Home = () => {
     },
   ];
   return (
-    <main className="font-heebo">
+    <main className={`font-heebo ${toggle ? "pt-[56px]" : ""}`}>
       <article className="w-full">
         <video autoPlay muted>
           <source src={Video} type="video/mp4"></source>

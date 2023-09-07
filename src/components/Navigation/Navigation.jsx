@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo/imagotipo_bar_top_sin_fondo.png";
 import iconDown from "../../assets/images/iconos/iconos_menu/down-chevron.png";
 
-const Navigation = () => {
+const Navigation = ({ setToggle, toggle }) => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const handleClick = () => {
     setNav(!nav);
+    setToggle(!toggle);
+    document.documentElement.scrollTo(0, 0);
   };
   const handleClickNavigate = () => {
     setNav(false);
@@ -19,7 +21,10 @@ const Navigation = () => {
   return (
     <nav
       id="navbar"
-      className={`flex items-center justify-between z-10 bg-black w-full ${nav?"fixed":""}`}  >
+      className={`flex items-center justify-between z-10 bg-black w-full ${
+        nav ? "fixed" : ""
+      }`}
+    >
       <Link onClick={handleClickNavigate} to="/" className="">
         <img className="h-14" src={Logo} alt="logo" />
       </Link>
@@ -35,7 +40,9 @@ const Navigation = () => {
           ></div>
           <div className={`w-5 h-[2px] bg-white ${nav ? "hidden" : ""}`}></div>
           <div
-            className={`w-5 h-[2px] bg-white ${nav ? "rotate-[-45deg] toggle" : ""}`}
+            className={`w-5 h-[2px] bg-white ${
+              nav ? "rotate-[-45deg] toggle" : ""
+            }`}
           ></div>
         </button>
       </div>

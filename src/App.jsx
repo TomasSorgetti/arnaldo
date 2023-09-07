@@ -7,9 +7,10 @@ import Historia from "../src/pages/Historia/Historia";
 import Sabores from "../src/pages/Sabores/Sabores";
 import Sucursales from "../src/pages/Sucursales/Sucursales";
 import Footer from "./components/Footer/Footer";
-import { useLayoutEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 
 const Wrapper = ({ children }) => {
+  
   const location = useLocation();
   useLayoutEffect(() => {
     document.documentElement.scrollTo(0, 0);
@@ -17,19 +18,19 @@ const Wrapper = ({ children }) => {
   return children;
 };
 function App() {
-
+  const [toggle, setToggle] = useState(false);
   return (
     <Wrapper>
-      <Navigation />
+      <Navigation setToggle={setToggle} toggle={toggle} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home toggle={toggle} />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/elaboracion" element={<Elaboracion />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/sabores" element={<Sabores />} />
         <Route path="/sucursales" element={<Sucursales />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Wrapper>
   );
 }
