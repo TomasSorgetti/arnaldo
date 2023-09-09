@@ -56,7 +56,7 @@ const Home = ({ toggle }) => {
               className="object-cover w-full"
             />
             <div className="flex absolute left-0 bottom-0 items-center w-full p-4 justify-between">
-              <h3 className="text-[2.5rem]">{page.name}</h3>
+              <h3 className="text-[2.5rem] font-black">{page.name}</h3>
               <img className="h-10" src={ArrowIcon} alt="arrow icon" />
             </div>
           </Link>
