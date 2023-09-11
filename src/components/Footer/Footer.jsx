@@ -4,9 +4,12 @@ const Footer = () => {
   return (
     <section className="text-center flex flex-col gap-4 p-4">
       <Link to="/" className="flex justify-center">
-        <img className='h-24' src={HeladoLogo} alt="logo 1" />
+        <img className="h-24" src={HeladoLogo} alt="logo 1" />
       </Link>
       <article className="flex flex-col gap-4">
+        <Link to="/" className="font-semibold">
+          INICIO
+        </Link>
         <div className="font-semibold">
           NUESTRO HELADO
           <div className="flex flex-col font-light text-[1rem]">
@@ -24,7 +27,7 @@ const Footer = () => {
           CONTACTO
         </Link>
       </article>
-      <div className='text-[10px] font-light text-textColor'>
+      <div className="text-[10px] font-light text-textColor">
         <p>© Arnaldo 2023. Todos los derechos reservados.</p>
         <p>Desarrollado por Tomi/Flor</p>
       </div>

@@ -57,6 +57,11 @@ const Navigation = ({ setToggle, toggle }) => {
           }`}
         >
           <li className="w-full border-b py-3">
+            <Link onClick={handleClickNavigate} to="/">
+              INICIO
+            </Link>
+          </li>
+          <li className="w-full border-b py-3">
             <button
               className="w-full pr-1 flex justify-between items-center"
               type="button"
