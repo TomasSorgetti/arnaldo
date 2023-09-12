@@ -10,7 +10,7 @@ const Sucursales = () => {
   }, []);
 
   return (
-    <section className="border-b-2 border-white pb-3">
+    <section className="border-b-2 border-white pb-3 font-heebo">
       <article className="relative h-[132px] overflow-hidden">
         <img className="object-cover" src={sucursales} alt="sabores header" />
         <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-black">
@@ -38,7 +38,7 @@ const Sucursales = () => {
                   {images.map((image, index) => (
                     <div
                       key={index}
-                      className="w-screen flex justify-center items-center"
+                      className="w-full flex justify-center items-center"
                     >
                       <div className="w-[328px] h-[200px]">
                         <img src={image} alt="sucursal" />
