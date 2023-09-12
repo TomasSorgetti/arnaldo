@@ -44,13 +44,13 @@ const Contacto = () => {
     }
   };
   return (
-    <main>
-      <section className="relative">
+    <section>
+      <article className="relative">
         <img src={contact} alt="sabores header" />
         <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-black">
           contacto
         </h3>
-      </section>
+      </article>
       <p className="p-5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
@@ -154,7 +154,7 @@ const Contacto = () => {
           enviar
         </button>
       </form>
-    </main>
+    </section>
   );
 };
 
