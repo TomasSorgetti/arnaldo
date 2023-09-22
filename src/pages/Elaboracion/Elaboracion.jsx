@@ -1,10 +1,10 @@
-import procesos from "../../assets/images/imagenes_elaboracion/procesos.png";
-import controles from "../../assets/images/imagenes_elaboracion/controles.png";
+import procesos from "../../assets/images/imagenes_elaboracion/procesos.webp";
+import controles from "../../assets/images/imagenes_elaboracion/controles.webp";
 import elaboracion from "../../assets/images/imagenes_elaboracion/elaboracion.png";
 
 const Elaboracion = () => {
   return (
-    <section className="font-heebo">
+    <section className="font-heebo pt-[3.5rem] border-b-2 border-white">
       <article className="relative h-[132px] overflow-hidden">
         <img
           className="object-cover w-full"
@@ -37,7 +37,11 @@ const Elaboracion = () => {
               adipiscing diam.
             </p>
           </div>
-          <img className="w-full mt-3" src={procesos} alt="procesos del helado" />
+          <img
+            className="w-full mt-3"
+            src={procesos}
+            alt="procesos del helado"
+          />
         </article>
         <article className="w-11/12 m-auto">
           <h3 className="text-[1.5rem] font-extrabold uppercase">controles</h3>
@@ -60,7 +64,11 @@ const Elaboracion = () => {
               adipiscing diam.
             </p>
           </div>
-          <img className="w-full mt-3" src={controles} alt="controles del helado" />
+          <img
+            className="w-full mt-3"
+            src={controles}
+            alt="controles del helado"
+          />
         </article>
       </section>
     </section>

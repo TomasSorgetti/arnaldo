@@ -1,9 +1,18 @@
 import historia from "../../assets/images/imagenes_home/cards_home/card_home_historia.webp";
 import empresa from "../../assets/images/imagenes_historia/empresa.webp";
 import marca from "../../assets/images/imagenes_historia/marca.webp";
+import marca2 from "../../assets/images/imagenes_historia/marca2.webp";
 import arnaldo from "../../assets/images/imagenes_historia/arnaldo.webp";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const Historia = () => {
+  const carousel = useRef();
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+  }, []);
+  const images = [marca,marca2];
   return (
     <section className="font-heebo pt-[3.5rem]  border-b-2 border-white">
       <article className="relative h-[132px] overflow-hidden">
@@ -61,7 +70,29 @@ const Historia = () => {
               adipiscing diam.
             </p>
           </div>
-          <img className="w-full mt-3" src={marca} alt="historia de la marca" />
+          <motion.div
+            ref={carousel}
+            className="w-full overflow-hidden"
+            whileTap={{ cursor: "grabbing" }}
+          >
+            <motion.div
+              className="w-full pt-5 flex gap-2 relative "
+              drag="x"
+              dragConstraints={{ right: 0, left: -width }}
+            >
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="w-full flex justify-center items-center"
+                >
+                  <div className="w-[300px] h-[200px] overflow-hidden">
+                    <img className="object-cover" src={image} alt="sucursal" />
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+          {/* <img className="w-full mt-3" src={marca} alt="historia de la marca" /> */}
         </article>
         <article className="w-11/12 m-auto">
           <h3 className="text-[1.5rem] font-extrabold uppercase">
