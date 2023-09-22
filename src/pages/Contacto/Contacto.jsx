@@ -45,7 +45,6 @@ const Contacto = () => {
       Swal.fire({
         html: '<div class="alerta"><h1 class="alertaTitle">GRACIAS POR CONTACTARNOS</h1><div class="alertaText"><p>Hemos recibido su mensaje de forma exitosa</p> <p>Responderemos a la brevedad vía email o telefónicamente.</p></div><div class="imgCont"></div></div>',
         // timer:10000,
-        padding:"20px 0 20px 0",
         allowOutsideClick: true,
         allowEscapeKey: true,
         showConfirmButton: false,
