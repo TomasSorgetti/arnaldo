@@ -1,11 +1,11 @@
 import historia from "../../assets/images/imagenes_home/cards_home/card_home_historia.webp";
-import empresa from "../../assets/images/imagenes_historia/empresa.png";
-import marca from "../../assets/images/imagenes_historia/marca.png";
-import arnaldo from "../../assets/images/imagenes_historia/arnaldo.png";
+import empresa from "../../assets/images/imagenes_historia/empresa.webp";
+import marca from "../../assets/images/imagenes_historia/marca.webp";
+import arnaldo from "../../assets/images/imagenes_historia/arnaldo.webp";
 
 const Historia = () => {
   return (
-    <section className="font-heebo  border-b-2 border-white">
+    <section className="font-heebo pt-[3.5rem]  border-b-2 border-white">
       <article className="relative h-[132px] overflow-hidden">
         <img className="object-cover" src={historia} alt="historia header" />
         <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-black">

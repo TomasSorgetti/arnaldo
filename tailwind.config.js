@@ -7,6 +7,7 @@ module.exports = {
         buttonColor: "#322F2F",
         buttonColor2: "#565454",
         textAreaBg: "#D9D9D9",
+        redError: "#FF5353",
       },
       fontFamily: {
         heebo: ["Heebo"],

@@ -1,5 +1,6 @@
 import contact from "../../assets/images/imagenes_contacto/card_pagina_contacto.webp";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const Contacto = () => {
   const [submited, setSubmited] = useState(false);
@@ -10,13 +11,13 @@ const Contacto = () => {
     cel: "",
     msg: "",
   });
-  const [errors, setErrors] = useState({
-    nombre: "",
-    empresa: "",
-    email: "",
-    cel: "",
-    msg: "",
-  });
+  // const [errors, setErrors] = useState({
+  //   nombre: "",
+  //   empresa: "",
+  //   email: "",
+  //   cel: "",
+  //   msg: "",
+  // });
   const [reset, setReset] = useState({
     nombre: "",
     empresa: "",
@@ -40,12 +41,16 @@ const Contacto = () => {
     if (form.nombre && form.email && form.cel && form.msg) {
       setForm(reset)
       setSubmited(false)
-      console.log(form);
+      Swal.fire({
+        title: "Success",
+        text: "Esto es una prueba",
+        icon: "success",
+      });
     }
   };
   return (
-    <section>
-      <article className="relative">
+    <section className="pt-[3.5rem]">
+      <article className="relative h-[132px] overflow-hidden">
         <img src={contact} alt="sabores header" />
         <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-black">
           contacto
@@ -66,7 +71,9 @@ const Contacto = () => {
           <input
             onChange={handleChange}
             className={`w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
-              submited && form.nombre === "" ? "border-red-500" : "border-white"
+              submited && form.nombre === ""
+                ? "border-redError"
+                : "border-white"
             }`}
             type="text"
             placeholder="Ingrese su nombre y apellido"
@@ -74,7 +81,7 @@ const Contacto = () => {
             value={form.nombre}
           />
           <span
-            className={`h-6 w-6 text-black rounded-full bg-red-500 absolute right-2 top-3 text-center font-bold ${
+            className={`h-6 w-6 text-black rounded-full bg-redError absolute right-2 top-3 text-center font-bold ${
               submited && form.nombre === "" ? "" : "hidden"
             }`}
           >
@@ -101,7 +108,7 @@ const Contacto = () => {
           <input
             onChange={handleChange}
             className={`w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
-              submited && form.email === "" ? "border-red-500" : "border-white"
+              submited && form.email === "" ? "border-redError" : "border-white"
             }`}
             type="text"
             placeholder="Ingrese su email de contacto"
@@ -109,7 +116,7 @@ const Contacto = () => {
             value={form.email}
           />
           <span
-            className={`h-6 w-6 text-black rounded-full bg-red-500 absolute right-2 top-3 text-center font-bold ${
+            className={`h-6 w-6 text-black rounded-full bg-redError absolute right-2 top-3 text-center font-bold ${
               submited && form.email === "" ? "" : "hidden"
             }`}
           >
@@ -123,7 +130,7 @@ const Contacto = () => {
           <input
             onChange={handleChange}
             className={`w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
-              submited && form.cel === "" ? "border-red-500" : "border-white"
+              submited && form.cel === "" ? "border-redError" : "border-white"
             }`}
             type="number"
             placeholder="Ingrese su teléfono de contacto"
@@ -131,7 +138,7 @@ const Contacto = () => {
             value={form.cel}
           />
           <span
-            className={`h-6 w-6 text-black rounded-full bg-red-500 absolute right-2 top-3 text-center font-bold ${
+            className={`h-6 w-6 text-black rounded-full bg-redError absolute right-2 top-3 text-center font-bold ${
               submited && form.cel === "" ? "" : "hidden"
             }`}
           >
@@ -141,7 +148,7 @@ const Contacto = () => {
         <textarea
           onChange={handleChange}
           className={`placeholder:text-black w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 ${
-            submited && form.msg === "" ? "border-red-500" : "border-white"
+            submited && form.msg === "" ? "border-redError" : "border-white"
           }`}
           name="msg"
           value={form.msg}

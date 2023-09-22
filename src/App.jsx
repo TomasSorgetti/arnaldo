@@ -18,12 +18,11 @@ const Wrapper = ({ children }) => {
   return children;
 };
 function App() {
-  const [toggle, setToggle] = useState(false);
   return (
     <Wrapper>
-      <Navigation setToggle={setToggle} toggle={toggle} />
+      <Navigation />
       <Routes>
-        <Route path="/" element={<Home toggle={toggle} />} />
+        <Route path="/" element={<Home />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/elaboracion" element={<Elaboracion />} />
         <Route path="/historia" element={<Historia />} />

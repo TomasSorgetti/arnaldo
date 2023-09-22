@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo/imagotipo_bar_top_sin_fondo.png";
 import iconDown from "../../assets/images/iconos/iconos_menu/down-chevron.png";
 
-const Navigation = ({ setToggle, toggle }) => {
+const Navigation = () => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const handleClick = () => {
     setNav(!nav);
-    setToggle(!toggle);
     document.documentElement.scrollTo(0, 0);
   };
   const handleClickNavigate = () => {
@@ -21,7 +20,7 @@ const Navigation = ({ setToggle, toggle }) => {
   return (
     <nav
       id="navbar"
-      className={`flex items-center justify-between z-10 bg-black w-full ${
+      className={`fixed flex items-center justify-between z-10 bg-black w-full ${
         nav ? "fixed" : ""
       }`}
     >
@@ -31,7 +30,7 @@ const Navigation = ({ setToggle, toggle }) => {
       <div className="block lg:hidden pr-4">
         <button
           onClick={handleClick}
-          className={`relative flex flex-col justify-center gap-[4px]`}
+          className={`p-2 relative flex flex-col justify-center gap-[4px]`}
         >
           <div
             className={`w-5 h-[2px] bg-white ${
