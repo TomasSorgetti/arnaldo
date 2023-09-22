@@ -34,13 +34,13 @@ const Contacto = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSubmited(true)
+    setSubmited(true);
     if (!form.nombre && !form.email && !form.cel && !form.msg) {
-    return
+      return;
     }
     if (form.nombre && form.email && form.cel && form.msg) {
-      setForm(reset)
-      setSubmited(false)
+      setForm(reset);
+      setSubmited(false);
       Swal.fire({
         title: "Success",
         text: "Esto es una prueba",
@@ -70,7 +70,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
+            className={`rounded w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
               submited && form.nombre === ""
                 ? "border-redError"
                 : "border-white"
@@ -94,7 +94,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className="w-full h-[46px] bg-black border-white border px-2 pt-2 focus:border-2"
+            className="rounded w-full h-[46px] bg-black border-white border px-2 pt-2 focus:border-2"
             type="text"
             placeholder="Ingrese el nombre de su empresa (opcional)"
             name="empresa"
@@ -107,7 +107,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
+            className={`rounded w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
               submited && form.email === "" ? "border-redError" : "border-white"
             }`}
             type="text"
@@ -129,7 +129,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
+            className={`rounded w-full h-[46px] bg-black  border px-2 pt-2 focus:border-2 ${
               submited && form.cel === "" ? "border-redError" : "border-white"
             }`}
             type="number"
@@ -145,15 +145,26 @@ const Contacto = () => {
             !
           </span>
         </div>
-        <textarea
-          onChange={handleChange}
-          className={`placeholder:text-black w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 ${
-            submited && form.msg === "" ? "border-redError" : "border-white"
-          }`}
-          name="msg"
-          value={form.msg}
-          placeholder="Mensaje"
-        ></textarea>
+        <div className="relative">
+          <textarea
+            onChange={handleChange}
+            className={`rounded placeholder:text-black placeholder:font-medium w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 ${
+              submited && form.msg === ""
+                ? "border-redError placeholder:text-redError"
+                : "border-white"
+            }`}
+            name="msg"
+            value={form.msg}
+            placeholder="Mensaje"
+          ></textarea>
+          <span
+            className={`z-10 h-6 w-6 text-black rounded-full bg-redError absolute right-2 top-2 text-center font-bold ${
+              submited && form.msg === "" ? "" : "hidden"
+            }`}
+          >
+            !
+          </span>
+        </div>
         <button
           type="submit"
           className="uppercase w-full bg-buttonColor2 rounded-full py-2"

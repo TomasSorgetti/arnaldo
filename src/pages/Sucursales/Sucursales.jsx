@@ -10,7 +10,7 @@ const Sucursales = () => {
   }, []);
 
   return (
-    <section className="border-b-2 border-white pb-3 font-heebo">
+    <section className="border-b-2 pt-[3.5rem] border-white pb-3 font-heebo">
       <article className="relative h-[132px] overflow-hidden">
         <img className="object-cover" src={sucursales} alt="sabores header" />
         <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-black">
@@ -18,7 +18,7 @@ const Sucursales = () => {
         </h3>
       </article>
 
-      <article className="flex flex-col gap-1 pl-5 py-3">
+      <article className="flex flex-col gap-10 pl-5 py-3">
         {list?.map(
           ({ nombre, calle, localidad, horario1, horario2, images }, index) => (
             <div key={index}>
@@ -40,8 +40,8 @@ const Sucursales = () => {
                       key={index}
                       className="w-full flex justify-center items-center"
                     >
-                      <div className="w-[328px] h-[200px]">
-                        <img src={image} alt="sucursal" />
+                      <div className="w-[300px] h-[200px] overflow-hidden">
+                        <img className="object-cover" src={image} alt="sucursal" />
                       </div>
                     </div>
                   ))}
@@ -53,7 +53,7 @@ const Sucursales = () => {
                 <h6 className="text-[0.65rem] font-semibold">Horarios</h6>
                 <p className="text-[0.65rem] font-light">{horario1}</p>
                 <p className="text-[0.65rem] font-light">{horario2}</p>
-                <button className="uppercase w-full rounded-full py-2 bg-buttonColor2 text-[0.9rem] font-bold mt-5">
+                <button className="uppercase w-full rounded py-2 bg-buttonColor2 text-[0.9rem] font-bold mt-5">
                   ver mapa
                 </button>
               </div>
