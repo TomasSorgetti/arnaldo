@@ -19,3 +19,32 @@ body{
 .toggle{
     transition: 0.15s ease-in;
 }
+
+.alerta{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    color: black;
+}
+.alertaTitle{
+    font-family: 'Heebo';
+    font-size: 18px;
+    font-weight: 800;
+}
+.alertaText{
+    margin: 0 auto;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* .imgCont{
+    width: 100px;
+    height: 100px;
+    z-index: 10px;
+    background-image: url("./assets/images/logo/logoPositivo.png");
+} */

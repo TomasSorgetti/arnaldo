@@ -32,6 +32,7 @@ const Contacto = () => {
     // setErrors(validate({ ...form, [property]: value }, errors));
     setForm({ ...form, [property]: value });
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmited(true);
@@ -39,15 +40,25 @@ const Contacto = () => {
       return;
     }
     if (form.nombre && form.email && form.cel && form.msg) {
-      setForm(reset);
+      // setForm(reset);
       setSubmited(false);
       Swal.fire({
-        title: "Success",
-        text: "Esto es una prueba",
-        icon: "success",
+        html: '<div class="alerta"><h1 class="alertaTitle">GRACIAS POR CONTACTARNOS</h1><div class="alertaText"><p>Hemos recibido su mensaje de forma exitosa</p> <p>Responderemos a la brevedad vía email o telefónicamente.</p></div><div class="imgCont"></div></div>',
+        // timer:10000,
+        padding:"20px 0 20px 0",
+        allowOutsideClick: true,
+        allowEscapeKey: true,
+        showConfirmButton: false,
+        buttonsStyling: true,
+        showCloseButton: true,
+        closeButtonAriaLabel: true,
+        // imageUrl: "../../assets/images/logo/logoPositivo.png",
+        // imageHeight: "100px",
+        // imageWidth:"100px",        
       });
     }
   };
+
   return (
     <section className="pt-[3.5rem]">
       <article className="relative h-[132px] overflow-hidden">
@@ -167,7 +178,7 @@ const Contacto = () => {
         </div>
         <button
           type="submit"
-          className="uppercase w-full bg-buttonColor2 rounded-full py-2"
+          className="uppercase w-full bg-buttonColor2 rounded py-2"
         >
           enviar
         </button>
