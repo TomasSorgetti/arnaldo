@@ -4,7 +4,7 @@ const Helados = () => {
   const { data } = useSelector((state) => state);
 
   return (
-    <div className="flex flex-col gap-6 px-5">
+    <div className="flex flex-col gap-6 px-5 mt-2">
       {data?.action === "ver todos" ? (
         <h1>TODOS LOS SABORES</h1>
       ) : (

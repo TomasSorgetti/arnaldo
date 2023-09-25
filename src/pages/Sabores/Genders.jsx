@@ -27,7 +27,7 @@ const Genders = () => {
     return (
       <motion.div
         ref={carousel}
-        className="w-full overflow-hidden"
+        className="w-full sticky top-[54px] bg-black overflow-hidden"
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div

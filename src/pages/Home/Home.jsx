@@ -7,7 +7,6 @@ import historia from "../../assets/images/imagenes_home/cards_home/card_home_his
 import ArrowIcon from "../../assets/images/iconos/iconos_cards_home/chevron_right.png";
 import Reseñas from "../../components/Reseñas/Reseñas";
 
-
 const Home = () => {
   const pages = [
     {
@@ -63,6 +62,7 @@ const Home = () => {
         ))}
       </section>
       <Reseñas />
+      <a className="uppercase w-11/12 rounded bg-black text-white">ver todas</a>
     </main>
   );
 };
