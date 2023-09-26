@@ -1,31 +1,31 @@
-import HeladoLogo from "../../assets/images/logo/imagotipo_sin_fondo.png"
-import { Link } from 'react-router-dom'
+import HeladoLogo from "../../assets/images/logo/imagotipo_sin_fondo.png";
+
 const Footer = () => {
   return (
     <section className="text-center flex flex-col gap-4 p-4">
-      <Link to="/" className="flex justify-center">
-        <img className="h-24" src={HeladoLogo} alt="logo 1" />
-      </Link>
+        <a href="/" className="flex justify-center">
+          <img className="h-24" src={HeladoLogo} alt="logo 1" />
+        </a>
       <article className="flex flex-col gap-4">
-        <Link to="/" className="font-semibold">
-          INICIO
-        </Link>
+          <a href="/" className="font-semibold">
+            INICIO
+          </a>
         <div className="font-semibold">
           NUESTRO HELADO
           <div className="flex flex-col font-light text-[1rem]">
-            <Link to="/sabores">Sabores</Link>
-            <Link to="/elaboracion">Elaboración</Link>
+            <a href="/sabores">Sabores</a>
+            <a href="/elaboracion">Elaboración</a>
           </div>
         </div>
-        <Link to="/sucursales" className="font-semibold">
+        <a href="/sucursales" className="font-semibold">
           SUCURSALES
-        </Link>
-        <Link to="/historia" className="font-semibold">
+        </a>
+        <a href="/historia" className="font-semibold">
           HISTORIA
-        </Link>
-        <Link to="/contacto" className="font-semibold">
+        </a>
+        <a href="/contacto" className="font-semibold">
           CONTACTO
-        </Link>
+        </a>
       </article>
       <div className="text-[10px] font-light text-textColor">
         <p>© Arnaldo 2023. Todos los derechos reservados.</p>
@@ -33,6 +33,6 @@ const Footer = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Footer
+export default Footer;

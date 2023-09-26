@@ -8,7 +8,6 @@ const Navigation = () => {
   const [dropdown, setDropdown] = useState(false);
   const handleClick = () => {
     setNav(!nav);
-    document.documentElement.scrollTo(0, 0);
   };
   const handleClickNavigate = () => {
     setNav(false);
@@ -17,16 +16,25 @@ const Navigation = () => {
   const handleDropdown = () => {
     setDropdown(!dropdown);
   };
+  const reloadPage = () => {
+    document.documentElement.scrollTo(0, 0);
+    setNav(false)
+  }
   return (
     <nav
-      id="navbar"
       className={`fixed flex items-center justify-between z-10 bg-black w-full ${
         nav ? "fixed" : ""
       }`}
     >
-      <Link onClick={handleClickNavigate} to="/" className="">
-        <img className="h-14" src={Logo} alt="logo" />
-      </Link>
+      {window.location.pathname !== "/" ? (
+        <Link onClick={handleClickNavigate} to="/" className="">
+          <img className="h-14" src={Logo} alt="logo" />
+        </Link>
+      ) : (
+        <button onClick={reloadPage}>
+          <img className="h-14" src={Logo} alt="logo" />
+        </button>
+      )}
       <div className="block lg:hidden pr-4">
         <button
           onClick={handleClick}
@@ -56,9 +64,13 @@ const Navigation = () => {
           }`}
         >
           <li className="w-full border-b py-3">
-            <Link onClick={handleClickNavigate} to="/">
-              INICIO
-            </Link>
+            {window.location.pathname !== "/" ? (
+              <Link onClick={handleClickNavigate} to="/">
+                INICIO
+              </Link>
+            ) : (
+              <button onClick={reloadPage}>INICIO</button>
+            )}
           </li>
           <li className="w-full border-b py-3">
             <button
@@ -78,28 +90,60 @@ const Navigation = () => {
                 !dropdown ? " hidden" : ""
               }`}
             >
-              <Link onClick={handleClickNavigate} to="/sabores">
-                Sabores
-              </Link>
-              <Link onClick={handleClickNavigate} to="/elaboracion">
-                Elaboración
-              </Link>
+              {window.location.pathname !== "/sabores" ? (
+                <Link onClick={handleClickNavigate} to="/sabores">
+                  Sabores
+                </Link>
+              ) : (
+                <button onClick={reloadPage} className="text-start">
+                  Sabores
+                </button>
+              )}
+              {window.location.pathname !== "/elaboracion" ? (
+                <Link onClick={handleClickNavigate} to="/elaboracion">
+                  Elaboración
+                </Link>
+              ) : (
+                <button onClick={reloadPage} className="text-start">
+                  Elaboracion
+                </button>
+              )}
             </ul>
           </li>
           <li className="w-full border-b py-3">
-            <Link onClick={handleClickNavigate} to="/sucursales">
-              SUCURSALES
-            </Link>
+            {window.location.pathname !== "/sucursales" ? (
+              <Link onClick={handleClickNavigate} to="/sucursales">
+                SUCURSALES
+              </Link>
+            ) : (
+              <button onClick={reloadPage} className="text-start">
+                SUCURSALES
+              </button>
+            )}
           </li>
           <li className="w-full border-b py-3">
+            {window.location.pathname !== "/historia" ? (
             <Link onClick={handleClickNavigate} to="/historia">
               HISTORIA
             </Link>
+
+            ) : (
+              <button onClick={reloadPage} className="text-start">
+                HISTORIA
+              </button>
+            )}
           </li>
           <li className="w-full border-b py-3">
+            {window.location.pathname !== "/contacto" ? (
+
             <Link onClick={handleClickNavigate} to="/contacto">
               CONTACTO
             </Link>
+            ) : (
+              <button onClick={reloadPage} className="text-start">
+                CONTACTO
+              </button>
+            )}
           </li>
         </ul>
       </div>

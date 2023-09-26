@@ -11,7 +11,7 @@ const Reseñas = () => {
   },[])
 
   return (
-    <div className="bg-white text-black p-4 pr-0 relative">
+    <div className="bg-white text-black pb-0 p-4 pr-0 relative">
       <h3 className="font-black text-[2rem] flex justify-between w-full items-center">
         <p>Nuestros Clientes</p>
         <img className="h-20" src={pngwing} alt="" />

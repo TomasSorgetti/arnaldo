@@ -26,7 +26,7 @@ const Home = () => {
     },
   ];
   return (
-    <main className={`font-heebo pt-[56px]`}>
+    <main id="main" className={`font-heebo pt-[56px]`}>
       <article className="w-full">
         <video autoPlay muted>
           <source src={Video} type="video/mp4"></source>
@@ -62,7 +62,11 @@ const Home = () => {
         ))}
       </section>
       <Reseñas />
-      <a className="uppercase w-11/12 rounded bg-black text-white">ver todas</a>
+      <div className="w-full pb-6 bg-white flex justify-center">
+        <button className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold">
+          ver todas
+        </button>
+      </div>
     </main>
   );
 };
