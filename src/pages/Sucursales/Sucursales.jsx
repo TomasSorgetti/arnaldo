@@ -1,12 +1,15 @@
-import list from "./List"
+import lista from "./List"
 import sucursales from "../../assets/images/imagenes_home/cards_home/card_home_sucursales.webp"
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 const Sucursales = () => {
   const carousel = useRef();
+  const carousel2 = useRef();
   const [width, setWidth] = useState(0);
+  const [width2, setWidth2] = useState(0);
   useEffect(() => {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+    setWidth2(carousel2.current?.scrollWidth - carousel2.current?.offsetWidth);
   }, []);
 
   return (
@@ -19,7 +22,7 @@ const Sucursales = () => {
       </article>
 
       <article className="flex flex-col gap-10 pl-5 py-3">
-        {list?.map(
+        {lista.list1?.map(
           ({ nombre, calle, localidad, horario1, horario2, images }, index) => (
             <div key={index}>
               <h3 className="text-[1.5rem] font-extrabold uppercase">
@@ -41,7 +44,56 @@ const Sucursales = () => {
                       className="w-full flex justify-center items-center"
                     >
                       <div className="w-[300px] h-[200px] overflow-hidden">
-                        <img className="object-cover" src={image} alt="sucursal" />
+                        <img
+                          className="object-cover"
+                          src={image}
+                          alt="sucursal"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </motion.div>
+              </motion.div>
+              <div className="pr-5">
+                <h4 className="text-[0.9rem] font-semibold">{calle}</h4>
+                <p className="text-[0.65rem] font-light">{localidad}</p>
+                <h6 className="text-[0.65rem] font-semibold">Horarios</h6>
+                <p className="text-[0.65rem] font-light">{horario1}</p>
+                <p className="text-[0.65rem] font-light">{horario2}</p>
+                <button className="uppercase w-full rounded py-2 bg-buttonColor2 text-[0.9rem] font-bold mt-5">
+                  ver mapa
+                </button>
+              </div>
+            </div>
+          )
+        )}
+        {lista.list2?.map(
+          ({ nombre, calle, localidad, horario1, horario2, images }, index) => (
+            <div key={index}>
+              <h3 className="text-[1.5rem] font-extrabold uppercase">
+                {nombre}
+              </h3>
+              <motion.div
+                ref={carousel2}
+                className="w-full overflow-hidden"
+                whileTap={{ cursor: "grabbing" }}
+              >
+                <motion.div
+                  className="w-full pt-5 flex gap-2 relative "
+                  drag="x"
+                  dragConstraints={{ right: 0, left: -width2 }}
+                >
+                  {images.map((image, index) => (
+                    <div
+                      key={index}
+                      className="w-full flex justify-center items-center"
+                    >
+                      <div className="w-[300px] h-[200px] overflow-hidden">
+                        <img
+                          className="object-cover"
+                          src={image}
+                          alt="sucursal"
+                        />
                       </div>
                     </div>
                   ))}

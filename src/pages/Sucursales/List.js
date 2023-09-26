@@ -15,7 +15,8 @@ import martinez2 from "../../assets/images/imagenes_sucursales/sucursal_martinez
 import martinez3 from "../../assets/images/imagenes_sucursales/sucursal_martinez/sucursal_martinez_03.webp";
 
 
-const list = [
+const lista = {
+  list1:[
   {
     nombre: "munro",
     calle: "Av. Vélez Sarsfield 4621",
@@ -32,6 +33,9 @@ const list = [
     horario2: "viernes y sábados: 10am - 1am",
     images: [olivos1, olivos2, olivos3, olivos4, olivos5],
   },
+
+  ],
+  list2 : [
   {
     nombre: "martinez",
     calle: "Gral. Alvear 101",
@@ -40,5 +44,7 @@ const list = [
     horario2: "viernes y sábados: 10am - 1am",
     images: [martinez1, martinez2, martinez3],
   },
-];
-export default list
+]
+};
+ 
+export default lista;
