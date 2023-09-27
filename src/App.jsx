@@ -7,7 +7,8 @@ import Historia from "../src/pages/Historia/Historia";
 import Sabores from "../src/pages/Sabores/Sabores";
 import Sucursales from "../src/pages/Sucursales/Sucursales";
 import Footer from "./components/Footer/Footer";
-import { useState, useLayoutEffect } from "react";
+import {  useLayoutEffect } from "react";
+
 
 const Wrapper = ({ children }) => {
   

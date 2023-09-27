@@ -1,8 +1,10 @@
 import contact from "../../assets/images/imagenes_contacto/card_pagina_contacto.webp";
 import { useState } from "react";
-import Swal from "sweetalert2";
+import Modals from "./Modals";
 
 const Contacto = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
   const [submited, setSubmited] = useState(false);
   const [form, setForm] = useState({
     nombre: "",
@@ -42,19 +44,7 @@ const Contacto = () => {
     if (form.nombre && form.email && form.cel && form.msg) {
       // setForm(reset);
       setSubmited(false);
-      Swal.fire({
-        html: '<div class="alerta"><h1 class="alertaTitle">GRACIAS POR CONTACTARNOS</h1><div class="alertaText"><p>Hemos recibido su mensaje de forma exitosa</p> <p>Responderemos a la brevedad vía email o telefónicamente.</p></div><div class="imgCont"></div></div>',
-        // timer:10000,
-        allowOutsideClick: true,
-        allowEscapeKey: true,
-        showConfirmButton: false,
-        buttonsStyling: true,
-        showCloseButton: true,
-        closeButtonAriaLabel: true,
-        // imageUrl: "../../assets/images/logo/logoPositivo.png",
-        // imageHeight: "100px",
-        // imageWidth:"100px",        
-      });
+      handleOpen()
     }
   };
 
@@ -175,6 +165,7 @@ const Contacto = () => {
             !
           </span>
         </div>
+        <Modals open={open} setOpen={setOpen} />
         <button
           type="submit"
           className="uppercase w-full bg-buttonColor2 rounded py-2"

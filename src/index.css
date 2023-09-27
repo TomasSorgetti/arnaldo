@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body{
     background-color: black;
     color: white;
@@ -49,3 +50,15 @@ body{
     z-index: 10px;
     background-image: url("./assets/images/logo/logoPositivo.png");
 } */
+
+#modal-modal-title{
+    font-size: 0.94rem;
+    font-weight: 700;
+    margin-left: 2px;
+}
+#modal-modal-description{
+    margin-top: 0;
+    font-size: 0.6rem;
+    font-weight: 300;
+    margin-left: 3px;
+}
