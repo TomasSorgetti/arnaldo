@@ -4,6 +4,7 @@ import Modals from "./Modals";
 
 const Contacto = () => {
   const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
   const [submited, setSubmited] = useState(false);
   const [form, setForm] = useState({
@@ -45,6 +46,9 @@ const Contacto = () => {
       // setForm(reset);
       setSubmited(false);
       handleOpen()
+      setTimeout(() => {
+        handleClose()
+      },4000)
     }
   };
 
@@ -52,7 +56,7 @@ const Contacto = () => {
     <section className="pt-[3.5rem]">
       <article className="relative h-[132px] overflow-hidden">
         <img src={contact} alt="sabores header" />
-        <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-black">
+        <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-bold">
           contacto
         </h3>
       </article>

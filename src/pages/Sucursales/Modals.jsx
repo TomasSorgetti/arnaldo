@@ -49,8 +49,8 @@ function Modals({ nombre, calle, localidad, gps }) {
             id="modal-modal-description"
             sx={{ mt: 2 }}
           >
-            <p>{calle}</p>
-            <p>{localidad}</p>
+            <span>{calle}</span>
+            <span>{localidad}</span>
           </Typography>
           <img className="w-full" src={gps} alt={nombre} />
         </Box>

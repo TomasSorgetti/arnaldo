@@ -8,6 +8,8 @@ module.exports = {
         buttonColor2: "#565454",
         textAreaBg: "#D9D9D9",
         redError: "#FF5353",
+        yellowColor: "#FFC600",
+        pinkColor: "#FE3F60",
       },
       fontFamily: {
         heebo: ["Heebo"],

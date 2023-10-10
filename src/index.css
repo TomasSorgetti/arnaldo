@@ -57,6 +57,9 @@ body{
     margin-left: 2px;
 }
 #modal-modal-description{
+    display: flex;
+    flex-direction: column;
+    gap: 2;
     margin-top: 0;
     font-size: 0.6rem;
     font-weight: 300;

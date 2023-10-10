@@ -54,16 +54,15 @@ const Navigation = () => {
         </button>
       </div>
       <div
-        className={`fixed z-10 top-[56px] w-screen font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center justify-start${
-          !nav ? " menuClose" : " menuOpen"
-        }`}
+        className={`fixed z-10 top-[56px] w-screen font-poppins text-subTitleColor font-medium text-[16px]
+        lg:relative lg:translate-x-0 lg:top-0
+        ${!nav ? " menuClose" : " menuOpen"}`}
       >
         <ul
-          className={`w-full h-screen text-[1.25rem] font-normal bg-black text-white left-0 top-14 flex  items-start px-4 flex-col justify-start gap-2 ${
-            nav ? "border-t-2 border-white" : ""
-          }`}
+          className={`w-full h-screen text-[1.25rem] font-normal bg-black text-white flex items-start px-4 flex-col justify-start gap-2 lg:flex-row lg:justify-center lg:h-[85px] lg:items-center lg:text-center
+          ${nav ? "border-t-2 border-white" : ""}`}
         >
-          <li className="w-full border-b py-3">
+          <li className="w-full border-b py-3 lg:border-none">
             {window.location.pathname !== "/" ? (
               <Link onClick={handleClickNavigate} to="/">
                 INICIO
@@ -72,45 +71,45 @@ const Navigation = () => {
               <button onClick={reloadPage}>INICIO</button>
             )}
           </li>
-          <li className="w-full border-b py-3">
+          <li className="w-full border-b py-3 lg:border-none">
             <button
               className="w-full pr-1 flex justify-between items-center"
               type="button"
               onClick={handleDropdown}
             >
-              <p>NUESTRO HELADO</p>
+              <p className="lg:w-[200px]">NUESTRO HELADO</p>
               <img
-                className={`h-4 ${dropdown ? "rotate-180" : ""}`}
+                className={`h-4 lg:hidden ${dropdown ? "rotate-180" : ""}`}
                 src={iconDown}
                 alt="icon down"
               />
             </button>
             <ul
-              className={`flex flex-col gap-1 pl-2 py-3 text-[1rem] font-normal ${
+              className={`flex flex-col gap-1 pl-2 py-3 text-[1rem] font-normal lg:absolute lg:bottom-[-85px] lg:text-center lg:bg-black lg:p-0 lg:w-[200px] lg:h-[85px] lg:justify-between ${
                 !dropdown ? " hidden" : ""
               }`}
             >
               {window.location.pathname !== "/sabores" ? (
-                <Link onClick={handleClickNavigate} to="/sabores">
+                <Link className="lg:h-full flex justify-center items-center" onClick={handleClickNavigate} to="/sabores">
                   Sabores
                 </Link>
               ) : (
-                <button onClick={reloadPage} className="text-start">
+                <button className="lg:h-full flex justify-center items-center" onClick={reloadPage}>
                   Sabores
                 </button>
               )}
               {window.location.pathname !== "/elaboracion" ? (
-                <Link onClick={handleClickNavigate} to="/elaboracion">
+                <Link className="lg:h-full flex justify-center items-center" onClick={handleClickNavigate} to="/elaboracion">
                   Elaboración
                 </Link>
               ) : (
-                <button onClick={reloadPage} className="text-start">
+                <button className="lg:h-full flex justify-center items-center" onClick={reloadPage}>
                   Elaboracion
                 </button>
               )}
             </ul>
           </li>
-          <li className="w-full border-b py-3">
+          <li className="w-full border-b py-3 lg:border-none">
             {window.location.pathname !== "/sucursales" ? (
               <Link onClick={handleClickNavigate} to="/sucursales">
                 SUCURSALES
@@ -121,24 +120,22 @@ const Navigation = () => {
               </button>
             )}
           </li>
-          <li className="w-full border-b py-3">
+          <li className="w-full border-b py-3 lg:border-none">
             {window.location.pathname !== "/historia" ? (
-            <Link onClick={handleClickNavigate} to="/historia">
-              HISTORIA
-            </Link>
-
+              <Link onClick={handleClickNavigate} to="/historia">
+                HISTORIA
+              </Link>
             ) : (
               <button onClick={reloadPage} className="text-start">
                 HISTORIA
               </button>
             )}
           </li>
-          <li className="w-full border-b py-3">
+          <li className="w-full border-b py-3 lg:border-none">
             {window.location.pathname !== "/contacto" ? (
-
-            <Link onClick={handleClickNavigate} to="/contacto">
-              CONTACTO
-            </Link>
+              <Link onClick={handleClickNavigate} to="/contacto">
+                CONTACTO
+              </Link>
             ) : (
               <button onClick={reloadPage} className="text-start">
                 CONTACTO
