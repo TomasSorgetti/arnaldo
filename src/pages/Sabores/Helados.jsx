@@ -4,28 +4,42 @@ const Helados = () => {
   const { data } = useSelector((state) => state);
 
   return (
-    <div className="flex flex-col gap-6 px-5 mt-2">
+    <div className="flex flex-col gap-6 px-5 mt-2 lg:px-10">
       {data?.action === "ver todos" ? (
-        <h1>TODOS LOS SABORES</h1>
+        <h2 className="uppercase text-[1.5rem] font-bold lg:text-[3rem] 2xl:text-[3.8rem]">
+          TODOS LOS SABORES
+        </h2>
       ) : (
-        <h1 className="uppercase">{data.action}</h1>
+        <h2 className="uppercase text-[1.5rem] font-bold lg:text-[3rem] 2xl:text-[3.8rem]">
+          {data.action}
+        </h2>
       )}
-      {data.filtred?.map(({ image, name, description, tacc }, index) => (
-        <div className="flex gap-2 items-center" key={index}>
-          <img
-            className="w-[72px] h-[72px]"
-            src={image}
-            alt="sabor de helado"
-          />
-          <div>
-            <h1 className="text-[0.9rem] uppercase font-semibold">{name}</h1>
-            <p className="text-[0.63rem] font-normal">
-              {description}
-            </p>
-            {tacc && <img src={tac} alt="gluten free logo" />}
+      <div className="flex flex-col gap-4 lg:gap-6 lg:w-full lg:flex-row lg:flex-wrap">
+        {data.filtred?.map(({ image, name, description, tacc }, index) => (
+          <div className="flex gap-2 items-center lg:w-[45%]" key={index}>
+            <img
+              className="w-[72px] h-[72px] lg:w-[150px] lg:h-[150px]"
+              src={image}
+              alt="sabor de helado"
+            />
+            <div className="flex flex-col justify-between h-full">
+              <h4 className="text-[0.9rem] uppercase font-semibold lg:text-[1.25rem] xl:text-[1.5rem]">
+                {name}
+              </h4>
+              <p className="text-[0.63rem] font-normal lg:text-[1rem] xl:text-[1.25rem]">
+                {description}
+              </p>
+              {tacc && (
+                <img
+                  className="w-[15px] h-[15px] lg:h-[30px] lg:w-[30px]"
+                  src={tac}
+                  alt="gluten free logo"
+                />
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

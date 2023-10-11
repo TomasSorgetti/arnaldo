@@ -6,24 +6,24 @@ const Footer = () => {
         <a href="/" className="flex justify-center">
           <img className="h-24" src={HeladoLogo} alt="logo 1" />
         </a>
-      <article className="flex flex-col gap-4">
-          <a href="/" className="font-semibold">
+      <article className="flex flex-col gap-4 lg:flex-row lg:justify-center lg:gap-14 lg:py-5">
+          <a href="/" className="font-semibold lg:w-[150px]">
             INICIO
           </a>
-        <div className="font-semibold">
+        <div className="font-semibold lg:w-[150px]">
           NUESTRO HELADO
           <div className="flex flex-col font-light text-[1rem]">
             <a href="/sabores">Sabores</a>
             <a href="/elaboracion">Elaboración</a>
           </div>
         </div>
-        <a href="/sucursales" className="font-semibold">
+        <a href="/sucursales" className="font-semibold lg:w-[150px]">
           SUCURSALES
         </a>
-        <a href="/historia" className="font-semibold">
+        <a href="/historia" className="font-semibold lg:w-[150px]">
           HISTORIA
         </a>
-        <a href="/contacto" className="font-semibold">
+        <a href="/contacto" className="font-semibold lg:w-[150px]">
           CONTACTO
         </a>
       </article>
