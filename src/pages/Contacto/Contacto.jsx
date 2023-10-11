@@ -43,7 +43,7 @@ const Contacto = () => {
       return;
     }
     if (form.nombre && form.email && form.cel && form.msg) {
-      // setForm(reset);
+      setForm(reset);
       setSubmited(false);
       handleOpen()
       setTimeout(() => {

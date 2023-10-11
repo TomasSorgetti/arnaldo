@@ -16,7 +16,7 @@ const Reseñas = () => {
         <p>Nuestros Clientes</p>
         <img className="h-20" src={pngwing} alt="" />
       </h3>
-      <p className="text-[1rem] mt-[-10px] font-normal mb-6">
+      <p className="text-[1rem] mt-[-10px] font-normal">
         Opiniones de Tripadvisor
       </p>
       <motion.div
@@ -25,7 +25,7 @@ const Reseñas = () => {
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
-          className="w-full h-[300px] flex gap-2 relative "
+          className="w-full h-[300px] flex gap-2 relative"
           drag="x"
           dragConstraints={{right:0,left:-width}}
         >

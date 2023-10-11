@@ -90,20 +90,20 @@ const Navigation = () => {
               }`}
             >
               {window.location.pathname !== "/sabores" ? (
-                <Link className="lg:h-full flex justify-center items-center" onClick={handleClickNavigate} to="/sabores">
+                <Link className="lg:h-full lg:flex justify-center items-center" onClick={handleClickNavigate} to="/sabores">
                   Sabores
                 </Link>
               ) : (
-                <button className="lg:h-full flex justify-center items-center" onClick={reloadPage}>
+                <button className="lg:h-full lg:flex justify-center items-center" onClick={reloadPage}>
                   Sabores
                 </button>
               )}
               {window.location.pathname !== "/elaboracion" ? (
-                <Link className="lg:h-full flex justify-center items-center" onClick={handleClickNavigate} to="/elaboracion">
+                <Link className="lg:h-full lg:flex justify-center items-center" onClick={handleClickNavigate} to="/elaboracion">
                   Elaboración
                 </Link>
               ) : (
-                <button className="lg:h-full flex justify-center items-center" onClick={reloadPage}>
+                <button className="lg:h-full lg:flex justify-center items-center" onClick={reloadPage}>
                   Elaboracion
                 </button>
               )}
