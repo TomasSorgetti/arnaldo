@@ -47,7 +47,7 @@ const Home = () => {
           <Link
             to={page.path}
             key={index}
-            className="relative h-[180px] w-full overflow-hidden"
+            className="relative h-[180px] w-full overflow-hidden lg:h-[350px] 2xl:h-[500px]"
           >
             <img
               src={page.img}
@@ -63,7 +63,7 @@ const Home = () => {
       </section>
       <Reseñas />
       <div className="w-full pb-6 bg-white flex justify-center">
-        <button className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold">
+        <button className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold lg:w-[400px]">
           ver todas
         </button>
       </div>
