@@ -37,29 +37,47 @@ const Genders = () => {
     setGenders(sortedGenders)
   };
   return (
-    <motion.div
-      ref={carousel}
-      className="w-full sticky top-[54px] bg-black overflow-hidden"
-      whileTap={{ cursor: "grabbing" }}
-    >
+    <section className="sticky top-[54px] lg:top-[84px]">
       <motion.div
-        className="pl-4 w-[710px] h-24 flex gap-4 items-center"
-        drag="x"
-        dragConstraints={{ right: 0, left: -width }}
+        ref={carousel}
+        className="w-full bg-black overflow-hidden lg:hidden"
+        whileTap={{ cursor: "grabbing" }}
       >
-        {genders.map((gender, index) => (
-          <button
-            onClick={() => handleClick(gender)}
-            className={`h-10 w-auto text-[0.9rem] uppercase rounded-full px-5 py-2 ${
-              active === gender ? `bg-white text-black` : "bg-buttonColor"
-            }`}
-            key={index}
-          >
-            {gender}
-          </button>
-        ))}
+        <motion.div
+          className="pl-4 w-[710px] h-24 flex gap-4 items-center"
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
+        >
+          {genders.map((gender, index) => (
+            <button
+              onClick={() => handleClick(gender)}
+              className={`h-10 w-auto text-[0.9rem] uppercase rounded-full px-5 py-2 ${
+                active === gender ? `bg-white text-black` : "bg-buttonColor"
+              }`}
+              key={index}
+            >
+              {gender}
+            </button>
+          ))}
+        </motion.div>
       </motion.div>
-    </motion.div>
+
+      <div className="hidden w-full bg-black overflow-hidden lg:block">
+        <div className="pl-4 w-[710px] h-24 flex gap-4 items-center">
+          {genders.map((gender, index) => (
+            <button
+              onClick={() => handleClick(gender)}
+              className={`h-10 w-auto text-[0.9rem] uppercase rounded-full px-5 py-2 ${
+                active === gender ? `bg-white text-black` : "bg-buttonColor"
+              }`}
+              key={index}
+            >
+              {gender}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
