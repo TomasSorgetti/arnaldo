@@ -21,7 +21,7 @@ const Historia = () => {
           historia
         </h3>
       </article>
-      <section className="flex flex-col gap-2 py-5">
+      <section className="flex flex-col gap-6 py-5">
         <article className="w-11/12 m-auto">
           <h3 className="text-[1.5rem] font-extrabold uppercase">
             sobre la empresa
