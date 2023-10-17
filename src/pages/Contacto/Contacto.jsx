@@ -154,7 +154,7 @@ const Contacto = () => {
             onChange={handleChange}
             className={`rounded focus:outline-none focus:bg-white placeholder:text-black placeholder:font-medium w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 ${
               submited && form.msg === ""
-                ? "border-redError placeholder:text-redError"
+                ? "border-redError"
                 : "border-white"
             }`}
             name="msg"
@@ -172,7 +172,7 @@ const Contacto = () => {
         <Modals open={open} setOpen={setOpen} />
         <button
           type="submit"
-          className="uppercase w-full bg-buttonColor2 rounded py-2"
+          className="uppercase w-full bg-buttonColor2 rounded py-2 mt-[-50px]"
         >
           enviar
         </button>
