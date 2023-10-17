@@ -9,6 +9,7 @@ const Sucursales = () => {
   const carousel2 = useRef();
   const [width, setWidth] = useState(0);
   const [width2, setWidth2] = useState(0);
+  
   useEffect(() => {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
     setWidth2(carousel2.current?.scrollWidth - carousel2.current?.offsetWidth);

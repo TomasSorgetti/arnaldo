@@ -26,15 +26,9 @@ const Navigation = () => {
         nav ? "fixed" : ""
       }`}
     >
-      {window.location.pathname !== "/" ? (
         <Link onClick={handleClickNavigate} to="/" className="">
-          <img className="h-14" src={Logo} alt="logo" />
+          <img className="h-14 lg:pl-5 lg:h-[5rem]" src={Logo} alt="logo" />
         </Link>
-      ) : (
-        <button onClick={reloadPage}>
-          <img className="h-14" src={Logo} alt="logo" />
-        </button>
-      )}
       <div className="block lg:hidden pr-4">
         <button
           onClick={handleClick}
@@ -85,25 +79,39 @@ const Navigation = () => {
               />
             </button>
             <ul
-              className={`flex flex-col gap-1 pl-2 py-3 text-[1rem] font-normal lg:absolute lg:bottom-[-85px] lg:text-center lg:bg-black lg:p-0 lg:w-[200px] lg:h-[85px] lg:justify-between ${
+              className={`flex flex-col gap-1 pl-3 py-3 text-[1rem] font-normal lg:absolute lg:bottom-[-85px] lg:text-center lg:bg-black lg:p-0 lg:w-[200px] lg:h-[85px] lg:justify-between ${
                 !dropdown ? " hidden" : ""
               }`}
             >
               {window.location.pathname !== "/sabores" ? (
-                <Link className="lg:h-full lg:flex justify-center items-center" onClick={handleClickNavigate} to="/sabores">
+                <Link
+                  className="lg:h-full lg:flex justify-center items-center"
+                  onClick={handleClickNavigate}
+                  to="/sabores"
+                >
                   Sabores
                 </Link>
               ) : (
-                <button className="lg:h-full lg:flex justify-center items-center" onClick={reloadPage}>
+                <button
+                  className="lg:h-full lg:flex justify-center items-center"
+                  onClick={reloadPage}
+                >
                   Sabores
                 </button>
               )}
               {window.location.pathname !== "/elaboracion" ? (
-                <Link className="lg:h-full lg:flex justify-center items-center" onClick={handleClickNavigate} to="/elaboracion">
+                <Link
+                  className="lg:h-full lg:flex justify-center items-center"
+                  onClick={handleClickNavigate}
+                  to="/elaboracion"
+                >
                   Elaboración
                 </Link>
               ) : (
-                <button className="lg:h-full lg:flex justify-center items-center" onClick={reloadPage}>
+                <button
+                  className="lg:h-full lg:flex justify-center items-center"
+                  onClick={reloadPage}
+                >
                   Elaboracion
                 </button>
               )}

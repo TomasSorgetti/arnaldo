@@ -1,4 +1,5 @@
-import amarena from "../../assets/images/imagen_lista_sabores/imagen_sabor_amarena.webp"
+import oronero from "../../assets/images/imagen_lista_sabores/imagen_sabor_oronero.png"
+import cafe from "../../assets/images/imagen_lista_sabores/imagen_sabor_cafe.webp"
 import americana_frutilla from "../../assets/images/imagen_lista_sabores/imagen_sabor_americana_con_frutilla.webp"
 import anana from "../../assets/images/imagen_lista_sabores/imagen_sabor_anana.webp";
 import banana_split from "../../assets/images/imagen_lista_sabores/imagen_sabor_banana_split.webp";
@@ -35,12 +36,11 @@ import granizado from "../../assets/images/imagen_lista_sabores/imagen_sabor_gra
 import kindovo from "../../assets/images/imagen_lista_sabores/imagen_sabor_kindovo.webp";
 import kinotos_al_whisky from "../../assets/images/imagen_lista_sabores/imagen_sabor_kinotos_al_whisky.webp";
 import limon from "../../assets/images/imagen_lista_sabores/imagen_sabor_limon.webp";
-import manzana from "../../assets/images/imagen_lista_sabores/imagen_sabor_manzana.webp";
 import maracuya from "../../assets/images/imagen_lista_sabores/imagen_sabor_maracuya.webp";
 import mascarpone from "../../assets/images/imagen_lista_sabores/imagen_sabor_mascarpone.webp";
 import menta_granizada from "../../assets/images/imagen_lista_sabores/imagen_sabor_menta_granizada.webp";
 import mousse_de_chocolate from "../../assets/images/imagen_lista_sabores/imagen_sabor_mousse_de_chocolate.webp";
-// import mousse_de_dulce_de_leche from "../../assets/images/imagen_lista_sabores/imagen_sabor_mousse_de_dulce_de_leche.webp";
+import mousse_de_dulce_de_leche from "../../assets/images/imagen_lista_sabores/imagen_sabor_mousse_de_dulce_de_leche.webp";
 import mousse_de_frambuesa from "../../assets/images/imagen_lista_sabores/imagen_sabor_mousse_de_frambuesa.webp";
 import mousse_de_limon_con_frutillas from "../../assets/images/imagen_lista_sabores/imagen_sabor_mousse_de_limon_con_frutillas.webp";
 import mousse_de_limon from "../../assets/images/imagen_lista_sabores/imagen_sabor_mousse_de_limon.webp";
@@ -54,10 +54,6 @@ import tramontana from "../../assets/images/imagen_lista_sabores/imagen_sabor_tr
 
 
 
-
-
-
-import tacc from "../../assets/images/iconos/iconos_lista_sabores/gluten.png"
 const saboresList = [
   {
     name: "crema americana",
@@ -109,9 +105,9 @@ const saboresList = [
     tacc: true,
   },
   {
-    name: "amarena",
+    name: "oronero",
     description: "Helado de crema batida elaborado con ingredientes naturales",
-    image: amarena,
+    image: oronero,
     gender: "cremas",
     tacc: true,
   },
@@ -132,7 +128,7 @@ const saboresList = [
   {
     name: "café",
     description: "Helado de crema batida elaborado con ingredientes naturales",
-    image: tacc,
+    image: cafe,
     gender: "cremas",
     tacc: true,
   },
@@ -221,13 +217,6 @@ const saboresList = [
     tacc: true,
   },
   {
-    name: "manzana",
-    description: "Helado de crema batida elaborado con ingredientes naturales",
-    image: manzana,
-    gender: "frutales",
-    tacc: true,
-  },
-  {
     name: "frambuesa",
     description: "Helado de crema batida elaborado con ingredientes naturales",
     image: frambuesa,
@@ -307,7 +296,7 @@ const saboresList = [
   {
     name: "mousse de dulce de leche",
     description: "Helado de crema batida elaborado con ingredientes naturales",
-    image: tacc,
+    image: mousse_de_dulce_de_leche,
     gender: "dulces de leche",
     tacc: true,
   },
@@ -399,13 +388,6 @@ const saboresList = [
     name: "chocolate c/ almendras",
     description: "Helado de crema batida elaborado con ingredientes naturales",
     image: chocolate_con_almendras,
-    gender: "chocolates",
-    tacc: true,
-  },
-  {
-    name: "chocolate c/ pasas",
-    description: "Helado de crema batida elaborado con ingredientes naturales",
-    image: tacc,
     gender: "chocolates",
     tacc: true,
   },

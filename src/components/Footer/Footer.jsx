@@ -6,7 +6,7 @@ const Footer = () => {
         <a href="/" className="flex justify-center">
           <img className="h-24" src={HeladoLogo} alt="logo 1" />
         </a>
-      <article className="flex flex-col gap-4 lg:flex-row lg:justify-center lg:gap-14 lg:py-5">
+      <article className="flex flex-col gap-6 lg:flex-row lg:justify-center lg:gap-14 lg:py-5">
           <a href="/" className="font-semibold lg:w-[150px]">
             INICIO
           </a>

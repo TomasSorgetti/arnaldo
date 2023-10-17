@@ -11,11 +11,11 @@ const Reseñas = () => {
   },[])
 
   return (
-    <div className="bg-white text-black pb-0 p-4 pr-0 relative">
-      <h3 className="font-black text-[2rem] flex justify-between w-full items-center">
-        <p>Nuestros Clientes</p>
+    <div className="bg-white text-black pb-0 p-4 pr-0 relative font-heebo">
+      <div className="font-black flex justify-between w-full items-center">
+        <h3 className="text-[2rem] font-heebo">Nuestros Clientes</h3>
         <img className="h-20" src={pngwing} alt="" />
-      </h3>
+      </div>
       <p className="text-[1rem] mt-[-10px] font-normal">
         Opiniones de Tripadvisor
       </p>
@@ -27,14 +27,14 @@ const Reseñas = () => {
         <motion.div
           className="w-full h-[300px] flex gap-2 relative"
           drag="x"
-          dragConstraints={{right:0,left:-width}}
+          dragConstraints={{ right: 0, left: -width }}
         >
           {cards.map((card, index) => (
             <div
               key={index}
               className="w-screen flex justify-center items-center"
             >
-              <div className="w-[310px] h-[260px] border-[1px] shadow-xl rounded-[25px]">
+              <div className="w-[330px] h-[260px] border-[1px] shadow-xl rounded-[25px]">
                 <div className="flex items-center gap-2 p-6">
                   <img
                     className="w-auto h-4"
