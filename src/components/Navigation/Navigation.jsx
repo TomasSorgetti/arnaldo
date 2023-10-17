@@ -9,26 +9,30 @@ const Navigation = () => {
   const handleClick = () => {
     setNav(!nav);
   };
-  const handleClickNavigate = () => {
+
+  const handleClickNavigate = (prop) => {
     setNav(false);
     setDropdown(false);
+    if (window.location.pathname === prop) {
+      reloadPage();
+    }
   };
   const handleDropdown = () => {
     setDropdown(!dropdown);
   };
   const reloadPage = () => {
     document.documentElement.scrollTo(0, 0);
-    setNav(false)
-  }
+    setNav(false);
+  };
   return (
     <nav
       className={`fixed flex items-center justify-between z-10 bg-black w-full ${
         nav ? "fixed" : ""
       }`}
     >
-        <Link onClick={handleClickNavigate} to="/" className="">
-          <img className="h-14 lg:pl-5 lg:h-[5rem]" src={Logo} alt="logo" />
-        </Link>
+      <Link onClick={() => handleClickNavigate("/")} to="/" className="">
+        <img className="h-14 lg:pl-5 lg:h-[5rem]" src={Logo} alt="logo" />
+      </Link>
       <div className="block lg:hidden pr-4">
         <button
           onClick={handleClick}
@@ -57,13 +61,9 @@ const Navigation = () => {
           ${nav ? "border-t-2 border-white" : ""}`}
         >
           <li className="w-full border-b py-3 lg:border-none">
-            {window.location.pathname !== "/" ? (
-              <Link onClick={handleClickNavigate} to="/">
-                INICIO
-              </Link>
-            ) : (
-              <button onClick={reloadPage}>INICIO</button>
-            )}
+            <Link onClick={() => handleClickNavigate("/")} to="/">
+              INICIO
+            </Link>
           </li>
           <li className="w-full border-b py-3 lg:border-none">
             <button
@@ -83,38 +83,20 @@ const Navigation = () => {
                 !dropdown ? " hidden" : ""
               }`}
             >
-              {window.location.pathname !== "/sabores" ? (
-                <Link
-                  className="lg:h-full lg:flex justify-center items-center"
-                  onClick={handleClickNavigate}
-                  to="/sabores"
-                >
-                  Sabores
-                </Link>
-              ) : (
-                <button
-                  className="lg:h-full lg:flex justify-center items-center"
-                  onClick={reloadPage}
-                >
-                  Sabores
-                </button>
-              )}
-              {window.location.pathname !== "/elaboracion" ? (
-                <Link
-                  className="lg:h-full lg:flex justify-center items-center"
-                  onClick={handleClickNavigate}
-                  to="/elaboracion"
-                >
-                  Elaboración
-                </Link>
-              ) : (
-                <button
-                  className="lg:h-full lg:flex justify-center items-center"
-                  onClick={reloadPage}
-                >
-                  Elaboracion
-                </button>
-              )}
+              <Link
+                className="lg:h-full lg:flex justify-center items-center"
+                onClick={() => handleClickNavigate("/sabores")}
+                to="/sabores"
+              >
+                Sabores
+              </Link>
+              <Link
+                className="lg:h-full lg:flex justify-center items-center"
+                onClick={() => handleClickNavigate("/elaboracion")}
+                to="/elaboracion"
+              >
+                Elaboración
+              </Link>
             </ul>
           </li>
           <li className="w-full border-b py-3 lg:border-none">
@@ -129,26 +111,20 @@ const Navigation = () => {
             )}
           </li>
           <li className="w-full border-b py-3 lg:border-none">
-            {window.location.pathname !== "/historia" ? (
-              <Link onClick={handleClickNavigate} to="/historia">
-                HISTORIA
-              </Link>
-            ) : (
-              <button onClick={reloadPage} className="text-start">
-                HISTORIA
-              </button>
-            )}
+            <Link
+              onClick={() => handleClickNavigate("/historia")}
+              to="/historia"
+            >
+              HISTORIA
+            </Link>
           </li>
           <li className="w-full border-b py-3 lg:border-none">
-            {window.location.pathname !== "/contacto" ? (
-              <Link onClick={handleClickNavigate} to="/contacto">
-                CONTACTO
-              </Link>
-            ) : (
-              <button onClick={reloadPage} className="text-start">
-                CONTACTO
-              </button>
-            )}
+            <Link
+              onClick={() => handleClickNavigate("/contacto")}
+              to="/contacto"
+            >
+              CONTACTO
+            </Link>
           </li>
         </ul>
       </div>
