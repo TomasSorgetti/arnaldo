@@ -13,7 +13,7 @@ const Reseñas = () => {
   return (
     <div className="bg-white text-black pb-0 p-4 pr-0 relative font-heebo">
       <div className="font-black flex justify-between w-full items-center">
-        <h3 className="text-[2rem] font-heebo">Nuestros Clientes</h3>
+        <h3 className="text-[2rem] font-heebo">Nuestros clientes</h3>
         <img className="h-20" src={pngwing} alt="" />
       </div>
       <p className="text-[1rem] mt-[-10px] font-normal">

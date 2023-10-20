@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { changeData } from "../../redux/actions/actions";
+
 const Genders = () => {
   const dispatch = useDispatch();
   const carousel = useRef();
@@ -12,6 +13,7 @@ const Genders = () => {
     dispatch(changeData("ver todos"));
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
   }, []);
+
   const originalGenders = [
     "ver todos",
     "chocolates",
@@ -19,6 +21,7 @@ const Genders = () => {
     "cremas",
     "frutales",
   ];
+
   const [genders, setGenders] = useState([
     "ver todos",
     "chocolates",
@@ -27,15 +30,16 @@ const Genders = () => {
     "frutales",
   ]);
 
-
   const handleClick = (gender) => {
     setActive(gender);
     dispatch(changeData(gender));
-    const gendersCopy = originalGenders.slice()
+    const gendersCopy = originalGenders.slice();
     let sortedGenders = gendersCopy.filter((item) => item !== gender);
-    sortedGenders.unshift(gender)
-    setGenders(sortedGenders)
+    sortedGenders.unshift(gender);
+    setGenders(sortedGenders);
+    document.documentElement.scrollTo(0, 0);
   };
+
   return (
     <section className="sticky top-[54px] lg:top-[84px]">
       <motion.div

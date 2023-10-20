@@ -8,7 +8,7 @@ const Footer = () => {
     }
   }
   return (
-    <section className="text-center flex flex-col gap-4 p-4">
+    <section className="text-center flex flex-col gap-10 p-4">
       <Link onClick={() => reloadPage("/")} to="/" className="flex justify-center">
         <img className="h-24" src={HeladoLogo} alt="logo 1" />
       </Link>
