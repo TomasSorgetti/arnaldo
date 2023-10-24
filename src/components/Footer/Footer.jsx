@@ -12,7 +12,7 @@ const Footer = () => {
       <Link onClick={() => reloadPage("/")} to="/" className="flex justify-center">
         <img className="h-24" src={HeladoLogo} alt="logo 1" />
       </Link>
-      <article className="flex flex-col gap-6 lg:flex-row lg:justify-center lg:gap-14 lg:py-5">
+      <article className="flex flex-col gap-6 lg:flex-row lg:justify-center lg:gap-14 lg:py-5 2xl:text-[1.5rem]">
         <Link
           onClick={() => reloadPage("/")}
           to="/"
@@ -20,9 +20,9 @@ const Footer = () => {
         >
           INICIO
         </Link>
-        <div className="font-semibold lg:w-[150px]">
+        <div className="font-semibold lg:w-[150px] 2xl:w-[250px]">
           NUESTRO HELADO
-          <div className="flex flex-col font-light text-[1rem]">
+          <div className="flex flex-col font-light text-[1rem] 2xl:text-[1.25rem]">
             <Link onClick={() => reloadPage("/sabores")} to="/sabores">
               Sabores
             </Link>

@@ -27,22 +27,22 @@ const Home = () => {
   ];
   return (
     <main id="main" className={`font-heebo pt-[56px]`}>
-      <article className="w-full">
-        <video autoPlay muted>
+      <article className="w-full lg:h-[600px] overflow-hidden">
+        <video autoPlay muted className="object-cover">
           <source src={Video} type="video/mp4"></source>
         </video>
       </article>
-      <article className="p-4 ">
-        <h2 className="text-[1.3rem] semism:text-[1.5rem] font-extrabold">
+      <article className="p-4 2xl:p-16">
+        <h2 className="text-[1.3rem] semism:text-[1.5rem] font-extrabold 2xl:text-[3.65rem]">
           DESCUBRÍ NUESTRO HELADO
         </h2>
-        <p className="text-[1rem] text-textColor font-normal">
+        <p className="text-[1rem] 2xl:text-[2rem] 2xl:leading-[47px] text-textColor font-normal">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud.
+          minim veniam, quis nostrud
         </p>
       </article>
-      <section className="flex flex-col gap-4 mb-4">
+      <section className="flex flex-col gap-4 mb-4 2xl:gap-8">
         {pages?.map((page, index) => (
           <Link
             to={page.path}
@@ -52,11 +52,11 @@ const Home = () => {
             <img
               src={page.img}
               alt={page.name}
-              className="object-cover w-full"
+              className="object-cover w-full absolute bottom-[-100px]"
             />
-            <div className="flex absolute left-0 bottom-0 items-center w-full p-4 justify-between">
-              <h3 className="text-[2.5rem] font-black">{page.name}</h3>
-              <img className="h-10" src={ArrowIcon} alt="arrow icon" />
+            <div className="flex absolute left-0 bottom-0 items-center w-full p-4 justify-between 2xl:pl-16">
+              <h3 className="text-[2.5rem] font-black 2xl:text-[6.3rem]">{page.name}</h3>
+              <img className="h-10 2xl:h-[80px]" src={ArrowIcon} alt="arrow icon" />
             </div>
           </Link>
         ))}

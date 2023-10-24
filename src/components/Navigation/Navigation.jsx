@@ -31,7 +31,7 @@ const Navigation = () => {
       }`}
     >
       <Link onClick={() => handleClickNavigate("/")} to="/" className="">
-        <img className="h-14 pl-3 lg:pl-5 lg:h-[5rem]" src={Logo} alt="logo" />
+        <img className="h-14 pl-3 lg:pl-5 lg:h-[5rem] 2xl:pl-16" src={Logo} alt="logo" />
       </Link>
       <div className="block lg:hidden pr-4">
         <button

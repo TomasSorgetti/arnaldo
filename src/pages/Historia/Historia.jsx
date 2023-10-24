@@ -5,14 +5,23 @@ import marca2 from "../../assets/images/imagenes_historia/marca2.webp";
 import arnaldo from "../../assets/images/imagenes_historia/arnaldo.webp";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 const Historia = () => {
-  const carousel = useRef();
-  const [width, setWidth] = useState(0);
-  useEffect(() => {
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
-  }, []);
-  const images = [marca,marca2];
+  // const carousel = useRef();
+  // const [width, setWidth] = useState(0);
+  // useEffect(() => {
+  //   setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+  // }, []);
+  // const images = [marca, marca2];
+  const handleDragStart = (e) => e.preventDefault();
+
+  const items = [
+    <img src={marca} onDragStart={handleDragStart} role="presentation" />,
+    <img src={marca2} onDragStart={handleDragStart} role="presentation" />,
+  ];
+
   return (
     <section className="font-heebo pt-[3.5rem]  border-b-2 border-white">
       <article className="relative h-[132px] overflow-hidden">
@@ -70,7 +79,10 @@ const Historia = () => {
               adipiscing diam.
             </p>
           </div>
-          <motion.div
+          <div className="mt-4">
+            <AliceCarousel mouseTracking disableButtonsControls items={items} />
+          </div>
+          {/* <motion.div
             ref={carousel}
             className="w-full overflow-hidden"
             whileTap={{ cursor: "grabbing" }}
@@ -91,7 +103,7 @@ const Historia = () => {
                 </div>
               ))}
             </motion.div>
-          </motion.div>
+          </motion.div> */}
           {/* <img className="w-full mt-3" src={marca} alt="historia de la marca" /> */}
         </article>
         <article className="w-11/12 m-auto">

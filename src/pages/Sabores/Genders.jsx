@@ -41,7 +41,7 @@ const Genders = () => {
   };
 
   return (
-    <section className="sticky top-[54px] lg:top-[84px]">
+    <section className="sticky top-[54px] lg:top-[84px] 2xl:pl-16">
       <motion.div
         ref={carousel}
         className="w-full bg-black overflow-hidden lg:hidden"
@@ -55,7 +55,7 @@ const Genders = () => {
           {genders.map((gender, index) => (
             <button
               onClick={() => handleClick(gender)}
-              className={`h-10 w-auto text-[0.9rem] uppercase rounded-full px-5 py-2 ${
+              className={`h-10 w-auto text-[0.9rem] uppercase rounded-full px-5 py-2 2xl:text-[1.14rem] ${
                 active === gender ? `bg-white text-black` : "bg-buttonColor"
               }`}
               key={index}
