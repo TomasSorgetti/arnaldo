@@ -18,8 +18,7 @@ import martinez3 from "../../assets/images/imagenes_sucursales/sucursal_martinez
 import MapaMartinez from "../../assets/images/imagenes_sucursales/sucursal_martinez/MapaMartinez.png";
 
 
-const lista = {
-  list: [
+const lista = [
     {
       nombre: "munro",
       calle: "Av. Vélez Sarsfield 4621",
@@ -29,8 +28,6 @@ const lista = {
       images: [munro1, munro2, munro3, munro4, munro5],
       gps: MapaMunro,
     },
-  ],
-  list1: [
     {
       nombre: "olivos",
       calle: "Av. Maipú 2327",
@@ -40,8 +37,6 @@ const lista = {
       images: [olivos1, olivos2, olivos3, olivos4, olivos5],
       gps: MapaOlivos,
     },
-  ],
-  list2: [
     {
       nombre: "martinez",
       calle: "Gral. Alvear 101",
@@ -50,8 +45,6 @@ const lista = {
       horario2: "viernes y sábados: 10am - 1am",
       images: [martinez1, martinez2, martinez3],
       gps: MapaMartinez,
-    },
-  ],
-};
- 
+    }
+]
 export default lista;
