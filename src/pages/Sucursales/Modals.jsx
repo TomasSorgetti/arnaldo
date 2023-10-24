@@ -20,7 +20,7 @@ function Modals({ nombre, calle, localidad, gps }) {
     <div className="font-heebo">
       <button
         onClick={handleOpen}
-        className="uppercase w-full rounded py-2 bg-buttonColor2 text-[0.9rem] font-bold mt-5"
+        className="uppercase w-full rounded py-2 bg-buttonColor2 text-[0.9rem] font-bold mt-5 2xl:text-[1.14rem]"
       >
         ver mapa
       </button>

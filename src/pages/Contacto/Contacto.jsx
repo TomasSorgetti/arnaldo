@@ -53,28 +53,29 @@ const Contacto = () => {
   };
 
   return (
-    <section className="pt-[3.5rem]">
-      <article className="relative h-[132px] overflow-hidden">
+    <section className="pt-[3.5rem] pb-8 border-b-2 border-white">
+      <article className="relative h-[132px] overflow-hidden 2xl:h-[370px]">
         <img src={contact} alt="sabores header" />
-        <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-bold">
+        <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-bold 2xl:text-[6.25rem] 2xl:pl-16">
           contacto
         </h3>
       </article>
-      <p className="p-5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+      <p className="p-5 2xl:px-20 2xl:py-10 2xl:text-[2rem]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+        egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales
+        id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
       </p>
       <form
         onSubmit={handleSubmit}
-        className="relative flex flex-col gap-8 w-full p-5 border-b-2 border-white"
+        className="relative flex flex-col gap-8 w-full p-5  2xl:w-[638px] m-auto 2xl:gap-12"
       >
         <div className="relative">
-          <label className="absolute top-[-14px] left-3 bg-black px-[2px]">
+          <label className="absolute top-[-14px] left-3 bg-black px-[2px] 2xl:text-[1.88rem] 2xl:top-[-25px]">
             Nombre y Apellido
           </label>
           <input
             onChange={handleChange}
-            className={`rounded placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 focus:outline-none ${
+            className={`rounded placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 focus:outline-none 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-4 ${
               submited && form.nombre === ""
                 ? "border-redError"
                 : "border-white"
@@ -93,12 +94,12 @@ const Contacto = () => {
           </span>
         </div>
         <div className="relative">
-          <label className="absolute top-[-14px] left-3 bg-black px-[2px]">
+          <label className="absolute top-[-14px] left-3 bg-black px-[2px] 2xl:text-[1.88rem] 2xl:top-[-25px]">
             Empresa
           </label>
           <input
             onChange={handleChange}
-            className="rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black border-white border px-2 focus:border-2"
+            className="rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black border-white border px-2 focus:border-2 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-4"
             type="text"
             placeholder="Ingrese el nombre de su empresa (opcional)"
             name="empresa"
@@ -106,12 +107,12 @@ const Contacto = () => {
           />
         </div>
         <div className="relative">
-          <label className="absolute top-[-14px] left-3 bg-black px-[2px]">
+          <label className="absolute top-[-14px] left-3 bg-black px-[2px] 2xl:text-[1.88rem] 2xl:top-[-25px]">
             Email
           </label>
           <input
             onChange={handleChange}
-            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 ${
+            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-4 ${
               submited && form.email === "" ? "border-redError" : "border-white"
             }`}
             type="text"
@@ -128,12 +129,12 @@ const Contacto = () => {
           </span>
         </div>
         <div className="relative">
-          <label className="absolute top-[-14px] left-3 bg-black px-[2px]">
+          <label className="absolute top-[-14px] left-3 bg-black px-[2px] 2xl:text-[1.88rem] 2xl:top-[-25px]">
             Teléfono
           </label>
           <input
             onChange={handleChange}
-            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 ${
+            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-4 ${
               submited && form.cel === "" ? "border-redError" : "border-white"
             }`}
             type="number"
@@ -152,10 +153,8 @@ const Contacto = () => {
         <div className="relative">
           <textarea
             onChange={handleChange}
-            className={`rounded focus:outline-none focus:bg-white placeholder:text-black placeholder:font-medium w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 ${
-              submited && form.msg === ""
-                ? "border-redError"
-                : "border-white"
+            className={`rounded focus:outline-none focus:bg-white placeholder:text-black placeholder:font-medium w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 2xl:placeholder:text-[1.5rem] 2xl:h-[321px] ${
+              submited && form.msg === "" ? "border-redError" : "border-white"
             }`}
             name="msg"
             value={form.msg}
@@ -172,7 +171,7 @@ const Contacto = () => {
         <Modals open={open} setOpen={setOpen} />
         <button
           type="submit"
-          className="uppercase w-full bg-buttonColor2 rounded py-2 mt-[-50px]"
+          className="uppercase font-bold w-full bg-buttonColor2 rounded py-2 mt-[-50px] 2xl:text-[1.15rem] 2xl:py-3"
         >
           enviar
         </button>

@@ -24,7 +24,7 @@ function Modals({ open, setOpen }) {
       >
         <Box
           sx={style}
-          className="w-11/12 flex flex-col gap-10 justify-center items-center"
+          className="w-11/12 flex flex-col gap-10 justify-center items-center 2xl:w-[682px] 2xl:h-[770px]"
         >
           <button
             onClick={handleClose}
