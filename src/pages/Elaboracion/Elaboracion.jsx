@@ -15,7 +15,7 @@ const Elaboracion = () => {
           elaboración
         </h3>
       </article>
-      <section className="flex flex-col gap-10 py-5 2xl:px-7">
+      <section className="flex flex-col gap-10 py-5 2xl:px-3">
         <article className="w-11/12 m-auto">
           <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.65rem]">
             procesos

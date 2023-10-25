@@ -56,17 +56,12 @@ const Home = () => {
             />
             <div className="flex absolute left-0 bottom-0 items-center w-full p-4 justify-between 2xl:pl-16">
               <h3 className="text-[2.5rem] font-black 2xl:text-[6.3rem]">{page.name}</h3>
-              <img className="h-10 2xl:h-[80px]" src={ArrowIcon} alt="arrow icon" />
+              <img className="h-10 2xl:h-[80px] 2xl:pr-10" src={ArrowIcon} alt="arrow icon" />
             </div>
           </Link>
         ))}
       </section>
       <Reseñas />
-      <div className="w-full pb-6 bg-white flex justify-center">
-        <button className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold lg:w-[400px]">
-          ver todas
-        </button>
-      </div>
     </main>
   );
 };

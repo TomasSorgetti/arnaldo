@@ -16,7 +16,11 @@ const Reseñas = () => {
         <h3 className="text-[2rem] font-heebo 2xl:text-[4.5rem]">
           Nuestros clientes
         </h3>
-        <img className="h-20 2xl:h-[216px]" src={pngwing} alt="tripadvisor logo" />
+        <img
+          className="h-20 2xl:h-[216px]"
+          src={pngwing}
+          alt="tripadvisor logo"
+        />
       </div>
       <p className="text-[1rem] mt-[-10px] font-normal 2xl:text-[2rem]">
         Opiniones de Tripadvisor
@@ -58,6 +62,11 @@ const Reseñas = () => {
           ))}
         </motion.div>
       </motion.div>
+      <div className="w-full pb-6 bg-white flex justify-center 2xl:pb-10">
+        <button className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold lg:w-[400px] 2xl:py-3">
+          ver todas
+        </button>
+      </div>
     </div>
   );
 };
