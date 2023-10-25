@@ -2,6 +2,7 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import cancel from "../../assets/images/iconos/iconos_navbar/cancel.png"
 const style = {
   position: 'absolute',
   top: '50%',
@@ -31,11 +32,12 @@ function Modals({ nombre, calle, localidad, gps }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="w-11/12">
-          <button
-            onClick={handleClose}
-            className="absolute top-2 right-4 text-[1.5rem]"
-          >
-            x
+          <button onClick={handleClose} className="absolute top-3 right-4 lg:top-6 lg:right-6">
+            <img
+              className="h-[1rem] xl:h-[2rem]"
+              src={cancel}
+              alt="cancel button"
+            />
           </button>
           <Typography
             id="modal-modal-title"
@@ -45,12 +47,13 @@ function Modals({ nombre, calle, localidad, gps }) {
           >
             Sucursal {nombre}
           </Typography>
-          <Typography
-            id="modal-modal-description"
-            sx={{ mt: 2 }}
-          >
-            <span>{calle}</span>
-            <span>{localidad}</span>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <span className="text-[0.625rem] font-light 2xl:text-[1.4rem]">
+              {calle}
+            </span>
+            <span className="text-[0.625rem] font-light 2xl:text-[1.4rem]">
+              {localidad}
+            </span>
           </Typography>
           <img className="w-full" src={gps} alt={nombre} />
         </Box>

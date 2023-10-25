@@ -55,9 +55,20 @@ body{
 } */
 
 #modal-modal-title{
-    font-size: 0.94rem;
+    font-size: 0.875rem;
     font-weight: 700;
     margin-left: 2px;
+}
+.css-3ekgo6{
+    padding: 8px !important;
+}
+@media screen and (min-width: 1024px) {
+    #modal-modal-title {
+            font-size: 1.875rem;
+        }
+    .css-3ekgo6{
+    padding: 26px !important;
+}
 }
 #modal-modal-description{
     display: flex;
@@ -92,6 +103,12 @@ body{
 .alice-carousel__dots-item:not(.__custom):not(:last-child){
     margin: 0px;
 }
+
+.alice-carousel__stage-item {
+    margin-right: -5px;
+}
+
+
 
 .alice-carousel__prev-btn{
     position: absolute;

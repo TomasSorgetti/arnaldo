@@ -42,7 +42,7 @@ const Home = () => {
           minim veniam, quis nostrud
         </p>
       </article>
-      <section className="flex flex-col gap-4 mb-4 2xl:gap-8">
+      <section className="flex flex-col gap-4 mb-4 2xl:gap-8 2xl:mb-8">
         {pages?.map((page, index) => (
           <Link
             to={page.path}
