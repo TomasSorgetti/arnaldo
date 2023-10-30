@@ -12,17 +12,17 @@ const Footer = () => {
       <Link onClick={() => reloadPage("/")} to="/" className="flex justify-center">
         <img className="h-24" src={HeladoLogo} alt="logo 1" />
       </Link>
-      <article className="flex flex-col gap-6 lg:flex-row lg:justify-center lg:gap-14 lg:py-5 2xl:text-[1.5rem]">
+      <article className="flex flex-col gap-6 lg:w-full lg:flex-row lg:justify-between lg:py-5 2xl:text-[1.5rem]">
         <Link
           onClick={() => reloadPage("/")}
           to="/"
-          className="font-semibold lg:w-[150px]"
+          className="font-semibold lg:w-[250px]"
         >
           INICIO
         </Link>
         <div className="font-semibold lg:w-[150px] 2xl:w-[250px]">
           NUESTRO HELADO
-          <div className="flex flex-col font-light text-[1rem] 2xl:text-[1.25rem]">
+          <div className="uppercase flex flex-col font-light text-[1rem] 2xl:text-[1.25rem]">
             <Link onClick={() => reloadPage("/sabores")} to="/sabores">
               Sabores
             </Link>
@@ -34,21 +34,21 @@ const Footer = () => {
         <Link
           onClick={() => reloadPage("/sucursales")}
           to="/sucursales"
-          className="font-semibold lg:w-[150px]"
+          className="font-semibold lg:w-[250px]"
         >
           SUCURSALES
         </Link>
         <Link
           onClick={() => reloadPage("/historia")}
           to="/historia"
-          className="font-semibold lg:w-[150px]"
+          className="font-semibold lg:w-[250px]"
         >
           HISTORIA
         </Link>
         <Link
           onClick={() => reloadPage("/contacto")}
           to="/contacto"
-          className="font-semibold lg:w-[150px]"
+          className="font-semibold lg:w-[250px]"
         >
           CONTACTO
         </Link>

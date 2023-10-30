@@ -24,7 +24,7 @@ const Sucursales = () => {
             index
           ) => (
             <div key={index}>
-              <h3 className="text-[1.5rem] font-extrabold uppercase">
+              <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.75rem] 2xl:mt-2">
                 {nombre}
               </h3>
               <div className="flex flex-col gap-0 lg:flex-row">

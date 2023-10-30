@@ -143,3 +143,25 @@ body{
 .__inactive {
     color: gray;
 }
+
+
+/**********navbar**********/
+.nav {
+    position: relative;
+}
+
+.nav::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    left: 0;
+    bottom: -8px;
+    position: absolute;
+    transition: 300ms;
+
+}
+
+.nav.nav:hover::before {
+    width: 100%;
+}

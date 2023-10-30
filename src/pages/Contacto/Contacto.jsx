@@ -53,7 +53,7 @@ const Contacto = () => {
   };
 
   return (
-    <section className="pt-[3.5rem] pb-8 border-b-2 border-white">
+    <section className="font-heebo pt-[3.5rem] pb-8 border-b-2 border-white">
       <article className="relative h-[132px] overflow-hidden 2xl:h-[370px]">
         <img src={contact} alt="sabores header" />
         <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-bold 2xl:text-[6.25rem] 2xl:pl-16">
