@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
 import HeladoLogo from "../../assets/images/logo/imagotipo_sin_fondo.png";
 
-const Footer = () => {
+const Footer = ({ setActiveNav }) => {
   const reloadPage = (prop) => {
+    setActiveNav(prop)
     if (window.location.pathname === prop) {
       document.documentElement.scrollTo(0, 0);
     }
-  }
+  };
   return (
     <section className="text-center flex flex-col gap-10 p-4">
-      <Link onClick={() => reloadPage("/")} to="/" className="flex justify-center 2xl:pb-2 2xl:pt-16">
+      <Link
+        onClick={() => reloadPage("/")}
+        to="/"
+        className="flex justify-center 2xl:pb-2 2xl:pt-16"
+      >
         <img className="h-24 2xl:h-[129px]" src={HeladoLogo} alt="logo 1" />
       </Link>
       <article className="flex flex-col gap-6 lg:w-full lg:flex-row lg:justify-between lg:py-5 2xl:text-[1.5rem]">

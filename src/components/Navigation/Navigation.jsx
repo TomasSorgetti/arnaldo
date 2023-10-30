@@ -3,14 +3,18 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo/imagotipo_bar_top_sin_fondo.png";
 import iconDown from "../../assets/images/iconos/iconos_menu/down-chevron.png";
 
-const Navigation = () => {
+
+const Navigation = ({ activeNav,setActiveNav}) => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  
+
   const handleClick = () => {
     setNav(!nav);
   };
 
   const handleClickNavigate = (prop) => {
+    setActiveNav(prop)
     setNav(false);
     setDropdown(false);
     if (window.location.pathname === prop) {
@@ -66,7 +70,7 @@ const Navigation = () => {
         >
           <li className="w-full border-b py-3 lg:border-none">
             <Link
-              className="nav"
+              className={`nav ${activeNav === "/" ? "before:w-full" : ""}`}
               onClick={() => handleClickNavigate("/")}
               to="/"
             >
@@ -75,7 +79,11 @@ const Navigation = () => {
           </li>
           <li className="w-full border-b py-3 lg:border-none lg:relative">
             <button
-              className="nav w-full pr-1 flex justify-between items-center lg:justify-center lg:w-auto"
+              className={`nav w-full pr-1 flex justify-between items-center lg:justify-center lg:w-auto ${
+                activeNav === "/sabores" || activeNav === "/elaboracion"
+                  ? "before:w-full"
+                  : ""
+              }`}
               type="button"
               onClick={handleDropdown}
             >
@@ -110,7 +118,9 @@ const Navigation = () => {
           </li>
           <li className="w-full border-b py-3 lg:border-none">
             <Link
-              className="nav"
+              className={`nav ${
+                activeNav === "/sucursales" ? "before:w-full" : ""
+              }`}
               onClick={() => handleClickNavigate("/sucursales")}
               to="/sucursales"
             >
@@ -119,7 +129,9 @@ const Navigation = () => {
           </li>
           <li className="w-full border-b py-3 lg:border-none">
             <Link
-              className="nav"
+              className={`nav ${
+                activeNav === "/historia" ? "before:w-full" : ""
+              }`}
               onClick={() => handleClickNavigate("/historia")}
               to="/historia"
             >
@@ -128,7 +140,9 @@ const Navigation = () => {
           </li>
           <li className="w-full border-b py-3 lg:border-none">
             <Link
-              className="nav"
+              className={`nav ${
+                activeNav === "/contacto" ? "before:w-full" : ""
+              }`}
               onClick={() => handleClickNavigate("/contacto")}
               to="/contacto"
             >
