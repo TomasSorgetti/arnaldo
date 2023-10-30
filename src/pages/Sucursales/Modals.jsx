@@ -32,7 +32,10 @@ function Modals({ nombre, calle, localidad, gps }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="w-11/12">
-          <button onClick={handleClose} className="absolute top-3 right-4 lg:top-6 lg:right-6">
+          <button
+            onClick={handleClose}
+            className="absolute top-3 right-4 lg:top-6 lg:right-6"
+          >
             <img
               className="h-[1rem] xl:h-[2rem]"
               src={cancel}
@@ -55,7 +58,12 @@ function Modals({ nombre, calle, localidad, gps }) {
               {localidad}
             </span>
           </Typography>
-          <img className="w-full" src={gps} alt={nombre} />
+          <iframe
+            src={gps}
+            className="w-full h-[613px]"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </Box>
       </Modal>
     </div>

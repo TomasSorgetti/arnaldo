@@ -8,7 +8,7 @@ const Carousels = ({ images }) => {
     const arr = [];
     images?.map((image) => {
       arr.push(
-        <div className="overflow-hidden w-[95%] lg:w-full">
+        <div className="overflow-hidden w-full lg:w-full">
           <img className="w-full object-cover" src={image} onDragStart={handleDragStart} role="presentation" />
         </div>
       );
@@ -17,9 +17,7 @@ const Carousels = ({ images }) => {
   }, []);
   const handleDragStart = (e) => e.preventDefault();
   return (
-    <div>
       <AliceCarousel mouseTracking disableButtonsControls items={items} />
-    </div>
   );
 };
 

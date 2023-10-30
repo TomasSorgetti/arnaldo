@@ -9,8 +9,8 @@ const Footer = () => {
   }
   return (
     <section className="text-center flex flex-col gap-10 p-4">
-      <Link onClick={() => reloadPage("/")} to="/" className="flex justify-center">
-        <img className="h-24" src={HeladoLogo} alt="logo 1" />
+      <Link onClick={() => reloadPage("/")} to="/" className="flex justify-center 2xl:pb-2 2xl:pt-16">
+        <img className="h-24 2xl:h-[129px]" src={HeladoLogo} alt="logo 1" />
       </Link>
       <article className="flex flex-col gap-6 lg:w-full lg:flex-row lg:justify-between lg:py-5 2xl:text-[1.5rem]">
         <Link
@@ -22,7 +22,7 @@ const Footer = () => {
         </Link>
         <div className="font-semibold lg:w-[150px] 2xl:w-[250px]">
           NUESTRO HELADO
-          <div className="uppercase flex flex-col font-light text-[1rem] 2xl:text-[1.25rem]">
+          <div className="uppercase flex flex-col font-light text-[1rem] 2xl:text-[1.25rem] 2xl:gap-3 2xl:mt-2">
             <Link onClick={() => reloadPage("/sabores")} to="/sabores">
               Sabores
             </Link>

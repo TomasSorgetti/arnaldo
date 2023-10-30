@@ -5,7 +5,7 @@ import Carousels from "./Carousels";
 
 const Sucursales = () => {
   return (
-    <section className="pt-[3.5rem] border-b-2 border-white pb-3 font-heebo">
+    <section className="pt-[3.5rem] border-b-2 border-white pb-3 font-heebo lg:pb-12">
       <article className="relative h-[132px] overflow-hidden w-full 2xl:h-[370px]">
         <img
           className="absolute bottom-[-16px] 2xl:bottom-[-200px] w-full"
@@ -17,7 +17,7 @@ const Sucursales = () => {
         </h3>
       </article>
 
-      <article className="flex flex-col gap-10 pl-5 py-3 2xl:px-20">
+      <article className="flex flex-col gap-10 pl-5 py-3 2xl:px-20 2xl:pt-16 2xl:gap-16">
         {lista?.map(
           (
             { nombre, calle, localidad, horario1, horario2, images, gps },
@@ -28,10 +28,10 @@ const Sucursales = () => {
                 {nombre}
               </h3>
               <div className="flex flex-col gap-0 lg:flex-row">
-                <div className="w-full lg:w-[62%]">
+                <div className="w-full lg:w-[65%] h-[500px]">
                   <Carousels images={images} />
                 </div>
-                <div className="pr-5 flex flex-col gap-2 2xl:gap-6 2xl:pl-6 2xl:w-[418px]">
+                <div className="pr-5 flex flex-col gap-2 2xl:gap-6 2xl:pl-8 2xl:w-[518px]">
                   <div>
                     <h4 className="text-[0.9rem] font-semibold 2xl:text-[2rem]">
                       {calle}
