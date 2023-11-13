@@ -27,7 +27,7 @@ const Elaboracion = () => {
           elaboración
         </motion.h3>
       </article>
-      <section className="flex flex-col gap-10 py-5 2xl:px-3">
+      <section className="flex flex-col gap-10 py-5 lg:gap-14 lg:py-10 2xl:px-3">
         <motion.article
           variants={{
             hidden: { opacity: 0, y: -70 },
@@ -36,7 +36,7 @@ const Elaboracion = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6 }}
-          className="w-11/12 m-auto"
+          className="w-11/12 m-auto flex flex-col lg:gap-4"
         >
           <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.65rem]">
             procesos
@@ -74,7 +74,7 @@ const Elaboracion = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6 }}
-          className="w-11/12 m-auto"
+          className="w-11/12 m-auto flex flex-col lg:gap-4"
         >
           <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.65rem]">
             controles

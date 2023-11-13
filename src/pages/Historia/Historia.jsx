@@ -38,7 +38,7 @@ const Historia = () => {
           historia
         </motion.h3>
       </article>
-      <section className="flex flex-col gap-6 py-5 md:gap-10 2xl:px-6">
+      <section className="flex flex-col gap-6 py-5 md:gap-10 lg:py-10 lg:gap-14 2xl:px-6">
         <motion.article
           variants={{
             hidden: { opacity: 0, y: -70 },
@@ -47,7 +47,7 @@ const Historia = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6 }}
-          className="w-11/12 m-auto"
+          className="w-11/12 m-auto flex flex-col lg:gap-4"
         >
           <h3 className="font-extrabold uppercase text-[1.5rem] sm:text-[1.8rem] md:text-[2rem] xl:text-[3rem] 2xl:text-[3.65rem]">
             sobre la empresa
