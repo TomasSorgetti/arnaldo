@@ -53,21 +53,21 @@ const Contacto = () => {
   };
 
   return (
-    <section className="font-heebo pt-[3.5rem] pb-8 border-b-2 border-white">
-      <article className="relative h-[132px] overflow-hidden 2xl:h-[370px]">
+    <section className="font-heebo pt-[3.5rem] lg:pt-[100px] pb-8 border-b-2 border-white">
+      <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img src={contact} alt="sabores header" />
-        <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-bold 2xl:text-[6.25rem] 2xl:pl-16">
+        <h3 className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16">
           contacto
         </h3>
       </article>
-      <p className="p-5 2xl:px-20 2xl:py-10 2xl:text-[2rem]">
+      <p className="p-5 sm:pl-6 2xl:px-20 2xl:py-10 2xl:text-[2rem]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
         egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales
         id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
       </p>
       <form
         onSubmit={handleSubmit}
-        className="relative flex flex-col gap-8 w-full p-5  2xl:w-[638px] m-auto 2xl:gap-12"
+        className="relative flex flex-col gap-8 w-full p-5 sm:w-10/12 md:w-8/12 lg:w-6/12  2xl:w-[638px] m-auto 2xl:gap-12"
       >
         <div className="relative">
           <label className="absolute top-[-14px] left-3 bg-black px-[2px] 2xl:text-[1.88rem] 2xl:top-[-25px]">
@@ -75,7 +75,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`rounded placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 focus:outline-none 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-4 ${
+            className={`rounded placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 focus:outline-none lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
               submited && form.nombre === ""
                 ? "border-redError"
                 : "border-white"
@@ -99,7 +99,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className="rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black border-white border px-2 focus:border-2 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-4"
+            className="rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black border-white border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6"
             type="text"
             placeholder="Ingrese el nombre de su empresa (opcional)"
             name="empresa"
@@ -112,7 +112,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-4 ${
+            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
               submited && form.email === "" ? "border-redError" : "border-white"
             }`}
             type="text"
@@ -134,7 +134,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-4 ${
+            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
               submited && form.cel === "" ? "border-redError" : "border-white"
             }`}
             type="number"
@@ -153,7 +153,7 @@ const Contacto = () => {
         <div className="relative">
           <textarea
             onChange={handleChange}
-            className={`rounded focus:outline-none focus:bg-white placeholder:text-black placeholder:font-medium w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 2xl:placeholder:text-[1.5rem] 2xl:h-[321px] ${
+            className={`rounded focus:outline-none focus:bg-white placeholder:text-black placeholder:font-medium w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 lg:p-4 lg:placeholder:text-[1rem] 2xl:placeholder:text-[1.5rem] 2xl:h-[321px] ${
               submited && form.msg === "" ? "border-redError" : "border-white"
             }`}
             name="msg"

@@ -106,7 +106,6 @@ body{
 
 .alice-carousel__stage-item {
     margin-right: -5px;
-    width: 850px !important;
 }
 
 
@@ -169,4 +168,10 @@ body{
 
 .nav.nav:hover::before {
     width: 100%;
+}
+.dropdown:hover .navDrop {
+    display: flex;
+}
+.navDrop:hover{
+    display: flex;
 }

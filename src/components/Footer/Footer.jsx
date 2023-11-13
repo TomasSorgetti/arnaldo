@@ -9,15 +9,15 @@ const Footer = ({ setActiveNav }) => {
     }
   };
   return (
-    <section className="text-center flex flex-col gap-10 p-4">
+    <section className="text-center flex flex-col gap-10 p-4 font-heebo">
       <Link
         onClick={() => reloadPage("/")}
         to="/"
-        className="flex justify-center 2xl:pb-2 2xl:pt-16"
+        className="flex justify-center lg:pt-10 lg:pb-2 2xl:pt-16"
       >
         <img className="h-24 2xl:h-[129px]" src={HeladoLogo} alt="logo 1" />
       </Link>
-      <article className="flex flex-col gap-6 lg:w-full lg:flex-row lg:justify-between lg:py-5 2xl:text-[1.5rem]">
+      <article className="flex flex-col gap-6 lg:w-full lg:flex-row lg:justify-between lg:py-5 lg:text-[1.2rem] 2xl:text-[1.5rem]">
         <Link
           onClick={() => reloadPage("/")}
           to="/"
@@ -25,9 +25,9 @@ const Footer = ({ setActiveNav }) => {
         >
           INICIO
         </Link>
-        <div className="font-semibold lg:w-[150px] 2xl:w-[250px]">
+        <div className="font-semibold lg:w-[250px]">
           NUESTRO HELADO
-          <div className="uppercase flex flex-col font-light text-[1rem] 2xl:text-[1.25rem] 2xl:gap-3 2xl:mt-2">
+          <div className="uppercase flex flex-col font-light text-[1rem] 2xl:text-[1.25rem] lg:gap-3 lg:mt-2">
             <Link onClick={() => reloadPage("/sabores")} to="/sabores">
               Sabores
             </Link>
@@ -58,7 +58,7 @@ const Footer = ({ setActiveNav }) => {
           CONTACTO
         </Link>
       </article>
-      <div className="text-[10px] font-light text-textColor">
+      <div className="text-[10px] font-light text-textColor lg:text-[0.8rem] 2xl:text-[1.125rem]">
         <p>© Arnaldo 2023. Todos los derechos reservados.</p>
         <p>Desarrollado por Tomi/Flor</p>
       </div>

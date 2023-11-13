@@ -27,16 +27,16 @@ const Home = () => {
   ];
   return (
     <main id="main" className={`font-heebo pt-[56px]`}>
-      <article className="w-full lg:h-[700px] overflow-hidden">
+      <article className="w-full lg:h-[500px] xl:h-[700px] 3xl:h-[800px] 4xl:h-[900px] overflow-hidden flex justify-center items-center">
         <video autoPlay muted className="object-cover">
           <source src={Video} type="video/mp4"></source>
         </video>
       </article>
-      <article className="p-4 2xl:p-16">
-        <h2 className="text-[1.3rem] semism:text-[1.5rem] font-extrabold 2xl:text-[3.65rem]">
+      <article className="p-4 lg:px-8 2xl:p-16">
+        <h2 className="text-[1.3rem] semism:text-[1.5rem] font-extrabold lg:text-[2.5rem] 2xl:text-[3.65rem]">
           DESCUBRÍ NUESTRO HELADO
         </h2>
-        <p className="text-[1rem] 2xl:text-[2rem] 2xl:leading-[47px] text-textColor font-normal">
+        <p className="text-[1rem] lg:text-[1.5rem] 2xl:text-[2rem] 2xl:leading-[47px] text-textColor font-normal">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud
@@ -47,16 +47,22 @@ const Home = () => {
           <Link
             to={page.path}
             key={index}
-            className="relative h-[180px] w-full overflow-hidden lg:h-[350px] 2xl:h-[500px]"
+            className="relative h-[180px] w-full overflow-hidden sm:h-[230px] md:h-[260px] lg:h-[350px] 2xl:h-[500px]"
           >
             <img
               src={page.img}
               alt={page.name}
-              className="object-cover w-full absolute bottom-[-100px]"
+              className="object-cover w-full absolute bottom-0"
             />
-            <div className="flex absolute left-0 bottom-0 items-center w-full p-4 justify-between 2xl:pl-16">
-              <h3 className="text-[2.5rem] font-black 2xl:text-[6.3rem]">{page.name}</h3>
-              <img className="h-10 2xl:h-[80px] 2xl:pr-10" src={ArrowIcon} alt="arrow icon" />
+            <div className="flex absolute left-0 bottom-0 items-center w-full p-4 justify-between lg:px-8 2xl:pl-16">
+              <h3 className="text-[2.5rem] font-black lg:text-[4.5rem] 2xl:text-[6.3rem]">
+                {page.name}
+              </h3>
+              <img
+                className="h-10 lg:h-[60px] 2xl:h-[80px] 2xl:pr-10"
+                src={ArrowIcon}
+                alt="arrow icon"
+              />
             </div>
           </Link>
         ))}

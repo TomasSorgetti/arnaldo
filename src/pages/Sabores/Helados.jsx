@@ -4,7 +4,7 @@ const Helados = () => {
   const { data } = useSelector((state) => state);
 
   return (
-    <div className="flex flex-col gap-6 px-5 mt-2 lg:px-10  border-b-2 border-white pb-6 2xl:pl-20 lg:pb-12">
+    <div className="flex flex-col gap-6 px-5 mt-2 lg:px-10 xl:px-16 border-b-2 border-white pb-6 2xl:pl-20 lg:pb-12">
       {data?.action === "ver todos" ? (
         <h2 className="uppercase text-[1.5rem] font-bold lg:text-[3rem] 2xl:text-[3.8rem]">
           TODOS LOS SABORES

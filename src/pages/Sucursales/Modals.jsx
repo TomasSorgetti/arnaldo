@@ -51,10 +51,10 @@ function Modals({ nombre, calle, localidad, gps }) {
             Sucursal {nombre}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <span className="text-[0.625rem] font-light 2xl:text-[1.4rem]">
+            <span className="text-[0.625rem] font-light lg:text-[1.1rem] 2xl:text-[1.4rem]">
               {calle}
             </span>
-            <span className="text-[0.625rem] font-light 2xl:text-[1.4rem]">
+            <span className="text-[0.625rem] font-light lg:text-[1.1rem] 2xl:text-[1.4rem]">
               {localidad}
             </span>
           </Typography>

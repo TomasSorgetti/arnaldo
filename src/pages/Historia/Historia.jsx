@@ -21,23 +21,23 @@ const Historia = () => {
   ];
 
   return (
-    <section className="font-heebo pt-[3.5rem]  border-b-2 border-white 2xl:pb-10">
-      <article className="relative h-[132px] overflow-hidden 2xl:h-[370px]">
+    <section className="font-heebo pt-[3.5rem] lg:pt-[100px] border-b-2 border-white 2xl:pb-10">
+      <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img
           className="object-cover absolute bottom-0 2xl:bottom-[-60px]"
           src={historia}
           alt="historia header"
         />
-        <h3 className="absolute uppercase left-4 bottom-0 text-[2.5rem] font-black 2xl:text-[6.25rem] 2xl:pl-16">
+        <h3 className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16">
           historia
         </h3>
       </article>
-      <section className="flex flex-col gap-6 py-5 2xl:gap-10">
+      <section className="flex flex-col gap-6 py-5 md:gap-10 2xl:px-6">
         <article className="w-11/12 m-auto">
-          <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.65rem]">
+          <h3 className="font-extrabold uppercase text-[1.5rem] sm:text-[1.8rem] md:text-[2rem] xl:text-[3rem] 2xl:text-[3.65rem]">
             sobre la empresa
           </h3>
-          <div className="flex flex-col gap-4 text-[1rem] font-normal 2xl:text-[2rem] 2xl:gap-8 2xl:mb-10">
+          <div className="flex flex-col gap-4 text-[1rem] sm:text-[1.2rem] md:text-[1.4rem] xl:text-[1.6rem] font-normal 2xl:text-[2rem] 2xl:gap-8 2xl:mb-10">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
@@ -56,13 +56,13 @@ const Historia = () => {
               adipiscing diam.
             </p>
           </div>
-          <img className="w-full mt-3" src={empresa} alt="" />
+          <img className="w-full mt-3 md:mt-6" src={empresa} alt="" />
         </article>
         <article className="w-11/12 m-auto">
-          <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.65rem]">
+          <h3 className="text-[1.5rem] font-extrabold uppercase sm:text-[1.8rem] md:text-[2rem] xl:text-[3rem] 2xl:text-[3.65rem]">
             NUESTRA MARCA
           </h3>
-          <div className="flex flex-col gap-4 text-[1rem] font-normal 2xl:text-[2rem] 2xl:gap-8 2xl:mb-10">
+          <div className="flex flex-col gap-4 text-[1rem] sm:text-[1.2rem] md:text-[1.4rem] xl:text-[1.6rem] font-normal 2xl:text-[2rem] 2xl:gap-8 2xl:mb-10">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
@@ -86,10 +86,10 @@ const Historia = () => {
           </div>
         </article>
         <article className="w-11/12 m-auto">
-          <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.65rem]">
+          <h3 className="text-[1.5rem] font-extrabold uppercase sm:text-[1.8rem] md:text-[2rem] xl:text-[3rem] 2xl:text-[3.65rem]">
             AGUSTÍN ARNALDO
           </h3>
-          <div className="flex flex-col gap-4 text-[1rem] font-normal 2xl:text-[2rem] 2xl:gap-8 2xl:mb-10">
+          <div className="flex flex-col gap-4 text-[1rem] font-normal sm:text-[1.2rem] md:text-[1.4rem] xl:text-[1.6rem] 2xl:text-[2rem] 2xl:gap-8 2xl:mb-10">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
@@ -108,7 +108,11 @@ const Historia = () => {
               adipiscing diam.
             </p>
           </div>
-          <img className="w-full mt-3" src={arnaldo} alt="arnaldo" />
+          <img
+            className="w-full mt-3 md:mt-6 md:mb-4"
+            src={arnaldo}
+            alt="arnaldo"
+          />
         </article>
       </section>
     </section>

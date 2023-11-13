@@ -3,18 +3,16 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo/imagotipo_bar_top_sin_fondo.png";
 import iconDown from "../../assets/images/iconos/iconos_menu/down-chevron.png";
 
-
-const Navigation = ({ activeNav,setActiveNav}) => {
+const Navigation = ({ activeNav, setActiveNav }) => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  
 
   const handleClick = () => {
     setNav(!nav);
   };
 
   const handleClickNavigate = (prop) => {
-    setActiveNav(prop)
+    setActiveNav(prop);
     setNav(false);
     setDropdown(false);
     if (window.location.pathname === prop) {
@@ -30,13 +28,17 @@ const Navigation = ({ activeNav,setActiveNav}) => {
   };
   return (
     <nav
-      className={`fixed flex items-center justify-between z-10 bg-black w-full lg:h-[100px] ${
+      className={`fixed font-heebo flex items-center justify-between z-10 bg-black w-full lg:h-[100px] ${
         nav ? "fixed" : ""
       }`}
     >
-      <Link onClick={() => handleClickNavigate("/")} to="/" className="">
+      <Link
+        className="pl-3 sm:pl-5 lg:pl-8 xl:pl-12 2xl:pl-[74px]"
+        onClick={() => handleClickNavigate("/")}
+        to="/"
+      >
         <img
-          className="h-14 pl-3 lg:pl-5 lg:h-[5rem] 2xl:pl-16"
+          className="h-14 w-full lg:h-[5rem] xl:h-[5.5rem] 2xl:h-[6rem] 3xl:h-[6.5rem] 4xl:h-[7rem]"
           src={Logo}
           alt="logo"
         />
@@ -65,10 +67,10 @@ const Navigation = ({ activeNav,setActiveNav}) => {
         ${!nav ? " menuClose" : " menuOpen"}`}
       >
         <ul
-          className={`w-full h-screen text-[1.25rem] font-normal bg-black text-white flex items-start px-4 flex-col justify-start gap-2 lg:flex-row lg:justify-center lg:h-[85px] lg:items-center lg:text-center lg:gap-0 lg:px-8
+          className={`w-full h-screen text-[1.25rem] font-normal bg-black text-white flex items-start px-4 flex-col justify-start gap-2 lg:flex-row lg:justify-center lg:h-[85px] lg:items-center lg:text-center lg:gap-6 lg:px-8
           ${nav ? "border-t-2 border-white" : ""}`}
         >
-          <li className="w-full border-b py-3 lg:border-none">
+          <li className="w-full font-semibold border-b py-3 lg:border-none">
             <Link
               className={`nav ${activeNav === "/" ? "before:w-full" : ""}`}
               onClick={() => handleClickNavigate("/")}
@@ -77,7 +79,7 @@ const Navigation = ({ activeNav,setActiveNav}) => {
               INICIO
             </Link>
           </li>
-          <li className="w-full border-b py-3 lg:border-none lg:relative">
+          <li className="dropdown w-full border-b py-3 lg:border-none lg:relative lg:pb-3">
             <button
               className={`nav w-full pr-1 flex justify-between items-center lg:justify-center lg:w-auto ${
                 activeNav === "/sabores" || activeNav === "/elaboracion"
@@ -87,7 +89,7 @@ const Navigation = ({ activeNav,setActiveNav}) => {
               type="button"
               onClick={handleDropdown}
             >
-              <p className="lg:w-[200px] lg:mr-[-8px]">NUESTRO HELADO</p>
+              <p className="lg:w-[200px] font-semibold">NUESTRO HELADO</p>
               <img
                 className={`h-4 ${dropdown ? "rotate-180" : ""}`}
                 src={iconDown}
@@ -95,12 +97,12 @@ const Navigation = ({ activeNav,setActiveNav}) => {
               />
             </button>
             <ul
-              className={`flex flex-col gap-1 pl-3 py-3 text-[1rem] font-normal lg:absolute lg:text-center lg:bg-black lg:p-0 2xl:bottom-[-190px] 2xl:left-[-30px] 2xl:w-[275px] 2xl:h-[175px] lg:justify-between ${
-                !dropdown ? " hidden" : ""
+              className={`navDrop flex flex-col gap-1 pl-3 py-3 text-[1rem] font-normal lg:absolute lg:text-center lg:bg-black lg:p-0 lg:w-[220px] lg:h-[120px] lg:bottom-[-123px] lg:left-[-10px]  2xl:w-[275px] 2xl:h-[175px] 2xl:bottom-[-175px] 2xl:left-[-30px] lg:justify-between lg:hidden 3xl:bottom-[-175px] ${
+                !dropdown ? "hidden lg:flex" : ""
               }`}
             >
               <Link
-                className="uppercase lg:h-full lg:flex justify-center items-center"
+                className="uppercase lg:h-full lg:flex justify-center items-center lg:pt-4"
                 onClick={() => handleClickNavigate("/sabores")}
                 to="/sabores"
               >
@@ -116,7 +118,7 @@ const Navigation = ({ activeNav,setActiveNav}) => {
               </Link>
             </ul>
           </li>
-          <li className="w-full border-b py-3 lg:border-none">
+          <li className="w-full border-b py-3 lg:border-none font-semibold">
             <Link
               className={`nav ${
                 activeNav === "/sucursales" ? "before:w-full" : ""
@@ -127,7 +129,7 @@ const Navigation = ({ activeNav,setActiveNav}) => {
               SUCURSALES
             </Link>
           </li>
-          <li className="w-full border-b py-3 lg:border-none">
+          <li className="w-full border-b py-3 lg:border-none font-semibold">
             <Link
               className={`nav ${
                 activeNav === "/historia" ? "before:w-full" : ""
@@ -138,7 +140,7 @@ const Navigation = ({ activeNav,setActiveNav}) => {
               HISTORIA
             </Link>
           </li>
-          <li className="w-full border-b py-3 lg:border-none">
+          <li className="w-full border-b py-3 lg:border-none font-semibold">
             <Link
               className={`nav ${
                 activeNav === "/contacto" ? "before:w-full" : ""

@@ -41,14 +41,14 @@ const Genders = () => {
   };
 
   return (
-    <section className="sticky top-[54px] lg:top-[84px] 2xl:pl-16">
+    <section className="sticky top-[54px] lg:pl-6 lg:top-[84px] xl:pl-10 2xl:pl-16">
       <motion.div
         ref={carousel}
         className="w-full bg-black overflow-hidden lg:hidden"
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
-          className="pl-4 w-[710px] h-24 flex gap-4 items-center"
+          className="pl-4 w-[710px] h-24 flex gap-4 items-center 2xl:gap-6"
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
         >
