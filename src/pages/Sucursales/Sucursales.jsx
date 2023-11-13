@@ -2,6 +2,9 @@ import lista from "./List";
 import sucursales from "../../assets/images/imagenes_home/cards_home/card_home_sucursales.webp";
 import Modals from "./Modals";
 import Carousels from "./Carousels";
+import { motion } from "framer-motion";
+
+
 
 const Sucursales = () => {
   return (
@@ -12,9 +15,17 @@ const Sucursales = () => {
           src={sucursales}
           alt="sabores header"
         />
-        <h3 className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16">
+        <motion.h3
+          variants={{
+            hidden: { opacity: 0, x: -70 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16">
           sucursales
-        </h3>
+        </motion.h3>
       </article>
 
       <article className="flex flex-col gap-10 pl-5 mt-4 py-3 lg:px-10 lg:pt-12 xl:px-16 2xl:px-20 2xl:pt-16 2xl:gap-16">

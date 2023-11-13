@@ -3,6 +3,8 @@ import greenBalls from "../../assets/images/iconos/icono_opinion_tripadvisor/ico
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import cards from "./cards";
+
+
 const Reseñas = () => {
   const carousel = useRef();
   const [width, setWidth] = useState(0);
@@ -12,7 +14,16 @@ const Reseñas = () => {
 
   return (
     <div className="bg-white text-black pb-4 pr-0 relative font-heebo lg:pl-8 2xl:pl-16">
-      <div className="font-black flex justify-between w-full items-center">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 70 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.6 }}
+        className="font-black flex justify-between w-full items-center"
+      >
         <div>
           <h3 className="text-[2rem] font-heebo lg:text-[3rem] 2xl:text-[4.8rem]">
             Nuestros clientes
@@ -26,7 +37,7 @@ const Reseñas = () => {
           src={pngwing}
           alt="tripadvisor logo"
         />
-      </div>
+      </motion.div>
       <motion.div
         ref={carousel}
         className="w-full overflow-hidden"

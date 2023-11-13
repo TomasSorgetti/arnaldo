@@ -1,6 +1,9 @@
 import procesos from "../../assets/images/imagenes_elaboracion/procesos.webp";
 import controles from "../../assets/images/imagenes_elaboracion/controles.webp";
 import elaboracion from "../../assets/images/imagenes_elaboracion/elaboracion.png";
+import { motion } from "framer-motion";
+
+
 
 const Elaboracion = () => {
   return (
@@ -11,12 +14,30 @@ const Elaboracion = () => {
           src={elaboracion}
           alt="historia header"
         />
-        <h3 className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16">
+        <motion.h3
+          variants={{
+            hidden: { opacity: 0, x: -70 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16"
+        >
           elaboración
-        </h3>
+        </motion.h3>
       </article>
       <section className="flex flex-col gap-10 py-5 2xl:px-3">
-        <article className="w-11/12 m-auto">
+        <motion.article
+          variants={{
+            hidden: { opacity: 0, y: -70 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="w-11/12 m-auto"
+        >
           <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.65rem]">
             procesos
           </h3>
@@ -44,8 +65,17 @@ const Elaboracion = () => {
             src={procesos}
             alt="procesos del helado"
           />
-        </article>
-        <article className="w-11/12 m-auto">
+        </motion.article>
+        <motion.article
+          variants={{
+            hidden: { opacity: 0, y: 70 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="w-11/12 m-auto"
+        >
           <h3 className="text-[1.5rem] font-extrabold uppercase 2xl:text-[3.65rem]">
             controles
           </h3>
@@ -73,7 +103,7 @@ const Elaboracion = () => {
             src={controles}
             alt="controles del helado"
           />
-        </article>
+        </motion.article>
       </section>
     </section>
   );

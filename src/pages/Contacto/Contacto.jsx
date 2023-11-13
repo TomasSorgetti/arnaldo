@@ -1,6 +1,10 @@
 import contact from "../../assets/images/imagenes_contacto/card_pagina_contacto.webp";
 import { useState } from "react";
 import Modals from "./Modals";
+import { motion } from "framer-motion";
+
+
+
 
 const Contacto = () => {
   const [open, setOpen] = useState(false);
@@ -56,16 +60,41 @@ const Contacto = () => {
     <section className="font-heebo pt-[3.5rem] lg:pt-[100px] pb-8 border-b-2 border-white">
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img src={contact} alt="sabores header" />
-        <h3 className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16">
+        <motion.h3
+          variants={{
+            hidden: { opacity: 0, x: -70 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16"
+        >
           contacto
-        </h3>
+        </motion.h3>
       </article>
-      <p className="p-5 sm:pl-6 2xl:px-20 2xl:py-10 2xl:text-[2rem]">
+      <motion.p
+        variants={{
+          hidden: { opacity: 0, y: -70 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.6 }}
+        className="p-5 sm:pl-6 2xl:px-20 2xl:py-10 2xl:text-[2rem]"
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
         egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales
         id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-      </p>
-      <form
+      </motion.p>
+      <motion.form
+        variants={{
+          hidden: { opacity: 0, x: -70 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.6 }}
         onSubmit={handleSubmit}
         className="relative flex flex-col gap-8 w-full p-5 sm:w-10/12 md:w-8/12 lg:w-6/12  2xl:w-[638px] m-auto 2xl:gap-12"
       >
@@ -175,7 +204,7 @@ const Contacto = () => {
         >
           enviar
         </button>
-      </form>
+      </motion.form>
     </section>
   );
 };

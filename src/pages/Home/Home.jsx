@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import Video from "../../assets/images/video_home/video_home_arnaldo.mp4";
-
 import sabores from "../../assets/images/imagenes_home/cards_home/card_home_sabores.webp";
 import sucursales from "../../assets/images/imagenes_home/cards_home/card_home_sucursales.webp";
 import historia from "../../assets/images/imagenes_home/cards_home/card_home_historia.webp";
 import ArrowIcon from "../../assets/images/iconos/iconos_cards_home/chevron_right.png";
 import Reseñas from "../../components/Reseñas/Reseñas";
+import {
+  motion,
+} from "framer-motion";
+
 
 const Home = () => {
   const pages = [
@@ -32,7 +35,16 @@ const Home = () => {
           <source src={Video} type="video/mp4"></source>
         </video>
       </article>
-      <article className="p-4 lg:px-8 2xl:p-16">
+      <motion.article
+        variants={{
+          hidden: { opacity: 0, x: -70 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.6, delay: 0.45 }}
+        className="p-4 lg:px-8 2xl:p-16"
+      >
         <h2 className="text-[1.3rem] semism:text-[1.5rem] font-extrabold lg:text-[2.5rem] 2xl:text-[3.65rem]">
           DESCUBRÍ NUESTRO HELADO
         </h2>
@@ -41,7 +53,7 @@ const Home = () => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud
         </p>
-      </article>
+      </motion.article>
       <section className="flex flex-col gap-4 mb-4 2xl:gap-8 2xl:mb-8">
         {pages?.map((page, index) => (
           <Link
@@ -55,9 +67,18 @@ const Home = () => {
               className="object-cover w-full absolute bottom-0"
             />
             <div className="flex absolute left-0 bottom-0 items-center w-full p-4 justify-between lg:px-8 2xl:pl-16">
-              <h3 className="text-[2.5rem] font-black lg:text-[4.5rem] 2xl:text-[6.3rem]">
+              <motion.h3
+                variants={{
+                  hidden: { opacity: 0, x: -40 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.5 }}
+                className="text-[2.5rem] font-black lg:text-[4.5rem] 2xl:text-[6.3rem]"
+              >
                 {page.name}
-              </h3>
+              </motion.h3>
               <img
                 className="h-10 lg:h-[60px] 2xl:h-[80px] 2xl:pr-10"
                 src={ArrowIcon}

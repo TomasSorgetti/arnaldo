@@ -41,7 +41,7 @@ const Genders = () => {
   };
 
   return (
-    <section className="sticky top-[54px] lg:pl-6 lg:top-[84px] xl:pl-10 2xl:pl-16">
+    <section className="sticky z-40 top-[54px] lg:pl-6 lg:top-[84px] xl:pl-10 2xl:pl-16">
       <motion.div
         ref={carousel}
         className="w-full bg-black overflow-hidden lg:hidden"

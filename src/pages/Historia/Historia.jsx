@@ -5,14 +5,11 @@ import marca2 from "../../assets/images/imagenes_historia/marca2.webp";
 import arnaldo from "../../assets/images/imagenes_historia/arnaldo.webp";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import { motion } from "framer-motion";
+
+
 
 const Historia = () => {
-  // const carousel = useRef();
-  // const [width, setWidth] = useState(0);
-  // useEffect(() => {
-  //   setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
-  // }, []);
-  // const images = [marca, marca2];
   const handleDragStart = (e) => e.preventDefault();
 
   const items = [
@@ -28,12 +25,30 @@ const Historia = () => {
           src={historia}
           alt="historia header"
         />
-        <h3 className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16">
+        <motion.h3
+          variants={{
+            hidden: { opacity: 0, x: -70 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="uppercase absolute left-4 bottom-0 text-[2.5rem] sm:pl-2 sm:text-[3rem] md:text-[3.5rem] font-black lg:text-[4rem] lg:pl-6 xl:pl-10 2xl:text-[6.25rem] 2xl:pl-16"
+        >
           historia
-        </h3>
+        </motion.h3>
       </article>
       <section className="flex flex-col gap-6 py-5 md:gap-10 2xl:px-6">
-        <article className="w-11/12 m-auto">
+        <motion.article
+          variants={{
+            hidden: { opacity: 0, y: -70 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="w-11/12 m-auto"
+        >
           <h3 className="font-extrabold uppercase text-[1.5rem] sm:text-[1.8rem] md:text-[2rem] xl:text-[3rem] 2xl:text-[3.65rem]">
             sobre la empresa
           </h3>
@@ -57,8 +72,17 @@ const Historia = () => {
             </p>
           </div>
           <img className="w-full mt-3 md:mt-6" src={empresa} alt="" />
-        </article>
-        <article className="w-11/12 m-auto">
+        </motion.article>
+        <motion.article
+          variants={{
+            hidden: { opacity: 0, y: 70 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="w-11/12 m-auto"
+        >
           <h3 className="text-[1.5rem] font-extrabold uppercase sm:text-[1.8rem] md:text-[2rem] xl:text-[3rem] 2xl:text-[3.65rem]">
             NUESTRA MARCA
           </h3>
@@ -84,8 +108,17 @@ const Historia = () => {
           <div className="mt-4 w-full h-full">
             <AliceCarousel mouseTracking disableButtonsControls items={items} />
           </div>
-        </article>
-        <article className="w-11/12 m-auto">
+        </motion.article>
+        <motion.article
+          variants={{
+            hidden: { opacity: 0, x: -70 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          className="w-11/12 m-auto"
+        >
           <h3 className="text-[1.5rem] font-extrabold uppercase sm:text-[1.8rem] md:text-[2rem] xl:text-[3rem] 2xl:text-[3.65rem]">
             AGUSTÍN ARNALDO
           </h3>
@@ -113,7 +146,7 @@ const Historia = () => {
             src={arnaldo}
             alt="arnaldo"
           />
-        </article>
+        </motion.article>
       </section>
     </section>
   );

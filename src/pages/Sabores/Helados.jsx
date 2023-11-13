@@ -1,5 +1,8 @@
 import { useSelector } from "react-redux";
 import tac from "../../assets/images/iconos/iconos_lista_sabores/gluten.png";
+
+
+
 const Helados = () => {
   const { data } = useSelector((state) => state);
 
@@ -16,7 +19,10 @@ const Helados = () => {
       )}
       <div className="flex flex-col gap-4 lg:gap-6 lg:w-full lg:flex-row lg:flex-wrap 2xl:gap-10">
         {data.filtred?.map(({ image, name, description, tacc }, index) => (
-          <div className="flex gap-2 items-center lg:w-[48%]" key={index}>
+          <div
+            className="flex gap-2 items-center lg:w-[48%]"
+            key={index}
+          >
             <img
               className="w-[72px] h-[72px] lg:w-[150px] lg:h-[150px] 2xl:w-[199px] 2xl:h-[199px]"
               src={image}
