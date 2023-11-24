@@ -76,9 +76,9 @@ const Reseñas = () => {
         </motion.div>
       </motion.div>
       <div className="w-full pb-6 bg-white flex justify-center lg:pb-8 2xl:pb-10 2xl:pr-16">
-        <button className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold lg:w-[400px] 2xl:py-3">
+        <a href="" target="blank" className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold lg:w-[400px] 2xl:py-3 hover:bg-hoverButton focus:bg-focusButton">
           ver todas
-        </button>
+        </a>
       </div>
     </div>
   );

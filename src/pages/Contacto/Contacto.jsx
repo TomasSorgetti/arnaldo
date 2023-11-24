@@ -2,6 +2,7 @@ import contact from "../../assets/images/imagenes_contacto/card_pagina_contacto.
 import { useState } from "react";
 import Modals from "./Modals";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 
 
@@ -58,6 +59,10 @@ const Contacto = () => {
 
   return (
     <section className="font-heebo pt-[3.5rem] lg:pt-[100px] pb-8 border-b-2 border-white">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ARNALDO | Contacto</title>
+      </Helmet>
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img src={contact} alt="sabores header" />
         <motion.h3
@@ -200,7 +205,7 @@ const Contacto = () => {
         <Modals open={open} setOpen={setOpen} />
         <button
           type="submit"
-          className="uppercase font-bold w-full bg-buttonColor2 rounded py-2 mt-[-50px] 2xl:text-[1.15rem] 2xl:py-3"
+          className="uppercase font-bold w-full bg-buttonColor2 hover:bg-[#322F2F] rounded py-2 mt-[-50px] 2xl:text-[1.15rem] 2xl:py-3"
         >
           enviar
         </button>

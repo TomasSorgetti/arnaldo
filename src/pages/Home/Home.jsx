@@ -8,7 +8,7 @@ import Reseñas from "../../components/Reseñas/Reseñas";
 import {
   motion,
 } from "framer-motion";
-
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const pages = [
@@ -30,6 +30,10 @@ const Home = () => {
   ];
   return (
     <main id="main" className={`font-heebo pt-[56px]`}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ARNALDO  |  Home</title>
+      </Helmet>
       <article className="w-full lg:h-[500px] xl:h-[700px] 3xl:h-[800px] 4xl:h-[900px] overflow-hidden flex justify-center items-center">
         <video autoPlay muted className="object-cover">
           <source src={Video} type="video/mp4"></source>

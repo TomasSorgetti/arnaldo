@@ -2,12 +2,17 @@ import procesos from "../../assets/images/imagenes_elaboracion/procesos.webp";
 import controles from "../../assets/images/imagenes_elaboracion/controles.webp";
 import elaboracion from "../../assets/images/imagenes_elaboracion/elaboracion.png";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 
 
 const Elaboracion = () => {
   return (
     <section className="font-heebo pt-[3.5rem] lg:pt-[100px] border-b-2 border-white 2xl:pb-10">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ARNALDO | Elaboración</title>
+      </Helmet>
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img
           className="object-cover w-full"
