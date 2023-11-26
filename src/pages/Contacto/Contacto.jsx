@@ -86,11 +86,10 @@ const Contacto = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.6 }}
-        className="p-5 sm:pl-6 2xl:px-20 2xl:py-10 2xl:text-[2rem]"
+        className="p-5 sm:pl-6 2xl:px-20 2xl:py-10 2xl:text-[2rem] lg:pl-10 xl:pl-12 2xl:pl-20"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-        egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales
-        id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+        ¿Necesitás ponerte en contacto con nosotros? Te invitamos a completar el
+        formulario y te responderemos a la brevedad.
       </motion.p>
       <motion.form
         variants={{

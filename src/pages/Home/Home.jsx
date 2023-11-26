@@ -32,7 +32,7 @@ const Home = () => {
     <main id="main" className={`font-heebo pt-[56px]`}>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>ARNALDO  |  Home</title>
+        <title>ARNALDO | Home</title>
       </Helmet>
       <article className="w-full lg:h-[500px] xl:h-[700px] 3xl:h-[800px] 4xl:h-[900px] overflow-hidden flex justify-center items-center">
         <video autoPlay muted className="object-cover">
@@ -49,13 +49,13 @@ const Home = () => {
         transition={{ duration: 0.6, delay: 0.45 }}
         className="p-4 lg:px-8 2xl:p-16"
       >
-        <h2 className="text-[1.3rem] semism:text-[1.5rem] font-extrabold lg:text-[2.5rem] 2xl:text-[3.65rem]">
-          DESCUBRÍ NUESTRO HELADO
+        <h2 className="text-[1.3rem] uppercase semism:text-[1.5rem] font-extrabold lg:text-[2.5rem] 2xl:text-[3.65rem]">
+          LA TRADICIÓN EN HELADOS
         </h2>
         <p className="text-[1rem] lg:text-[1.5rem] 2xl:text-[2rem] 2xl:leading-[47px] text-textColor font-normal">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud
+          Sabor, calidad y variedad. Desde 1965, más de medio siglo de historia
+          elaborando nuestros productos y ofreciendo el mejor helado a los
+          vecinos de Zona Norte.
         </p>
       </motion.article>
       <section className="flex flex-col gap-4 mb-4 2xl:gap-8 2xl:mb-8">
