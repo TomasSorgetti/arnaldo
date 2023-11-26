@@ -45,7 +45,7 @@ const Sucursales = () => {
               </h3>
               <div className="flex flex-col gap-0 lg:flex-row">
                 <div className="w-full lg:w-[65%] my-2">
-                  <Carousels images={images} />
+                  <Carousels  images={images} />
                 </div>
                 <div className="pr-5 flex flex-col gap-2 lg:w-full lg:pl-4 lg:gap-4 xl:pl-6 2xl:gap-6 2xl:pl-8 2xl:w-[518px]">
                   <div>

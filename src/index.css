@@ -105,45 +105,61 @@ body{
 }
 
 .alice-carousel__stage-item {
-    margin-right: -5px;
+    margin-right: -0.01px;
 }
 
 
+.alice-carousel__prev-btn, .alice-carousel__next-btn{
+    display: none;
+}
+@media screen and (min-width:1024px){
+    .alice-carousel__prev-btn {
+            display: block;
+            position: absolute;
+            top: 35%;
+            left: 0;
+        }
+        .alice-carousel__prev-btn-wrapper {
+            text-align: left;
+        }
+        .alice-carousel__prev-btn-item {
+            font-size: 3rem;
+            color: white;
+        }
+        .alice-carousel__prev-btn-item .__inactive {
+            color: gray;
+        }
+    
+    
+        .alice-carousel__next-btn {
+            display: block;
+            position: absolute;
+            top: 35%;
+            right: 0;
+        }
+        .alice-carousel__next-btn-wrapper {
+            text-align: right;
+        }
+        .alice-carousel__next-btn-item {
+            font-size: 3rem;
+            color: white;
+        }
+        .alice-carousel__next-btn-item .__inactive {
+            color: gray;
+        }
 
-.alice-carousel__prev-btn{
-    position: absolute;
-    top: 40%;
-    left: 0;
+        /****** Historia Carousel******/
+        .historiaCarousel .alice-carousel__prev-btn,.historiaCarousel .alice-carousel__next-btn{
+            top: 40%;
+        }
+        .historiaCarousel .alice-carousel__next-btn-item,.historiaCarousel .alice-carousel__prev-btn-item {
+            font-size: 5rem;
+            color: #565454;
+        }
+        .historiaCarousel .alice-carousel__prev-btn-item .__inactive,.historiaCarousel .alice-carousel__next-btn-item .__inactive {
+            color: #56545480;
+        }
 }
-.alice-carousel__prev-btn-wrapper{
-    text-align: left;
-}
-.alice-carousel__prev-btn-item{
-    font-size: 8rem;
-    color: white;
-}
-.alice-carousel__prev-btn-item .__inactive{
-    color: gray;
-}
-
-
-.alice-carousel__next-btn{
-    position: absolute;
-    top: 40%;
-    right: 0;
-}
-.alice-carousel__next-btn-wrapper {
-    text-align: right;
-}
-.alice-carousel__next-btn-item {
-    font-size: 8rem;
-    color: white;
-}
-.alice-carousel__next-btn-item
-.__inactive {
-    color: gray;
-}
-
 /********sucursales modal gps*********/
 .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
     background-color: rgba(0, 0, 0, 0.3) !important;

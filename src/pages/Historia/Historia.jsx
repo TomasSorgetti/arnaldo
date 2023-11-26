@@ -109,8 +109,8 @@ const Historia = () => {
               adipiscing diam.
             </p>
           </div>
-          <div className="mt-4 w-full h-full">
-            <AliceCarousel mouseTracking disableButtonsControls items={items} />
+          <div className="mt-4 w-full h-full historiaCarousel">
+            <AliceCarousel mouseTracking items={items} />
           </div>
         </motion.article>
         <motion.article
