@@ -12,6 +12,9 @@ body{
     color: white;
     overflow-x:clip;
 }
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 .menuClose{
     transform: translateX(100%);
     transition: 500ms;
@@ -161,16 +164,45 @@ body{
         }
         /****** Reseñas Carousel******/
         .reseñas_carousel .alice-carousel__next-btn, .reseñas_carousel .alice-carousel__prev-btn{
-            width: 100px;
+            width: 80px;
+        }
+        .reseñas_carousel  .alice-carousel .alice-carousel__next-btn{
+            right: 50px;
+
         }
         
         .reseñas_carousel .alice-carousel__next-btn-item,
         .reseñas_carousel .alice-carousel__prev-btn-item {
             font-size: 5rem;
-            color: #565454;
+            font-weight: 400;
+            color: black;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 6%;
+            background-color: white;
+            box-shadow: -2px 2px 5px 3px rgba(0, 0, 0, 0.24);
+            -webkit-box-shadow: -2px 2px 5px 3px rgba(0, 0, 0, 0.24);
+            -moz-box-shadow: -2px 2px 5px 3px rgba(0, 0, 0, 0.24);
         }
         .reseñas_carousel .alice-carousel__prev-btn-item.__inactive, .reseñas_carousel .alice-carousel__next-btn-item.__inactive {
             color: transparent;
+            background-color: transparent;
+            box-shadow: none;
+        }
+}
+@media screen and (min-width:1440px) {
+    .reseñas_carousel .alice-carousel__next-btn,
+        .reseñas_carousel .alice-carousel__prev-btn {
+            width: 100px;
+        }
+    .reseñas_carousel .alice-carousel__next-btn-item,
+        .reseñas_carousel .alice-carousel__prev-btn-item {
+            font-size: 7rem;
+            height: 120px;
         }
 }
 /********sucursales modal gps*********/

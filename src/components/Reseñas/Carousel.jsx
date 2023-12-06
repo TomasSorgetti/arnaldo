@@ -49,7 +49,7 @@ const Carousel = () => {
         items: 2,
       },
       1024: {
-        items: 2.8,
+        items: 2.9,
       },
       1280: {
         items: 3.5,
