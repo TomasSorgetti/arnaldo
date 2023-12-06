@@ -180,21 +180,82 @@ const Historia = () => {
           </h3>
           <div className="flex flex-col gap-4 text-[1rem] font-normal sm:text-[1.2rem] md:text-[1.4rem] xl:text-[1.6rem] 2xl:text-[2rem] 2xl:gap-8 2xl:mb-10">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-              facilisis magna etiam tempor orci eu lobortis elementum. Vitae
-              tortor condimentum lacinia quis. Arcu risus quis varius quam
-              quisque id diam. Interdum consectetur libero id faucibus.
+              Agustín Arnaldo, fundador de las heladerías que llevan su nombre,
+              llegó a Argentina en los años 40 como uno más de los inmigrantes.
+              Nació en 1939 en Cuevas, una aldea de Belmonte de Miranda,
+              provincia de Oviedo, España. Durante su infancia en Asturias, se
+              familiarizó con las labores rurales; a pesar de su corta edad,
+              cuidaba ovejas y recogía leña para el fuego.
             </p>
             <p>
-              Pellentesque habitant morbi tristique senectus et netus et. Sem
-              viverra aliquet eget sit amet tellus cras. Elementum nibh tellus
-              molestie nunc non blandit. Parturient montes nascetur ridiculus
-              mus mauris vitae ultricies leo integer. Eget lorem dolor sed
-              viverra ipsum. Arcu dictum varius duis at consectetur lorem donec
-              massa sapien. At urna condimentum mattis pellentesque id. Massa
-              massa ultricies mi quis hendrerit dolor. Commodo odio aenean sed
-              adipiscing diam.
+              Después de finalizar la Guerra Civil Española, con tan solo 9
+              años, Agustín y su madre tomaron sus maletas y se unieron a su tío
+              Don Antonio Arnaldo en busca de oportunidades en estas tierras
+              benditas.
+            </p>
+            <p>
+              En 1948, ya establecido en Buenos Aires, estudió en la Escuela
+              Superior de Comercio nro.1 Joaquín V. González del barrio porteño
+              de Barracas. También se capacitó en dactilografía, contabilidad
+              superior, comercialización y publicidad en la Asociación de
+              Dirigentes de Ventas.
+            </p>
+            <p>
+              Con apenas 11 años, empezó a trabajar como cadete en la farmacia
+              Boeri en la calle San Juan y Bolívar. Luego en la farmacia Gentile
+              de Garay y Defensa, y también en la tintorería Casa Villanueva en
+              Viamonte 921. A los 17, manejaba la contabilidad en la empresa
+              Orlando Poli y cía y trabajaba como mozo en el Anchor Inn Bar
+              junto con su madre. Con esos dos empleos y gracias a los ahorros y
+              propinas de los marineros ingleses, logró independizarse para dar
+              inicio a lo que sería su empresa y su vida.
+            </p>
+            <p>
+              A los 17 años conoció a doña María del Carmen Álvarez en el Club
+              Centro Galicia de Olivos. Se casaron después de cinco años de
+              noviazgo y ella fue su esposa hasta su partida en el año 2001.
+              Tuvieron tres hijos: María del Carmen, Luis Agustín y Omar.
+            </p>
+            <p>
+              Agustín Arnaldo, desde muy joven, se inició como comerciante. En
+              1957 abrió su primer comercio de despacho de pan en Av. Del
+              Libertador 274 de Vicente López. Mientras su madre atendía el
+              local, él seguía trabajando para el estudio contable y,
+              simultáneamente, se formaba en fabricación de helados en la
+              empresa Siam. Tres años después, incluyó la elaboración y venta de
+              helados en su negocio de panadería.
+            </p>
+            <p>
+              En septiembre de 1965, abrió su primera heladería en la Galería
+              Caribe de Av. Vélez Sarsfield 4690, Munro, bajo el nombre de
+              Heladería Sorrento. Para progresar en el rubro, estudió
+              refrigeración en la Academia Taller Fulton y trabajó junto a su
+              familia y primeros empleados mientras la demanda crecía.
+            </p>
+            <p>
+              En 1977, invirtió todos sus ahorros, su primera casa y su primer
+              auto para adquirir el local de Av. Vélez Sarsfield 4621 de Munro,
+              que aún está en funcionamiento.
+            </p>
+            <p>
+              Hasta 1992, la heladería se llamó Sorrento, pero debido a
+              problemas de marca registrada, decidió usar su apellido para
+              nombrar sus helados.
+            </p>
+            <p>
+              En 1994 abrió su primera sucursal en Olivos y a principios del
+              2000, su segundo local en Martínez, modernizando completamente la
+              planta de elaboración y depósito para satisfacer la demanda de los
+              tres locales.
+            </p>
+            <p>
+              Hoy en día, Agustín Arnaldo colabora en las tareas necesarias,
+              pero son sus hijos quienes se encargan de todo en la empresa.
+            </p>
+            <p>
+              El fundador de esta empresa se siente agradecido por haber sido
+              recibido por este hermoso país con los brazos abiertos, país que
+              le brindó la oportunidad de crecer y formar una familia.
             </p>
           </div>
           <img

@@ -22,7 +22,7 @@ const Reseñas = () => {
             Nuestros clientes
           </h3>
           <p className="text-[1rem] mt-[-10px] font-normal lg:text-[1.5rem] 2xl:text-[2rem]">
-            Opiniones de Tripadvisor
+            Opiniones en Tripadvisor
           </p>
         </div>
         <img

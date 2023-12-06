@@ -38,7 +38,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
         to="/"
       >
         <img
-          className="h-14 w-full lg:h-[5rem] xl:h-[5.5rem] 2xl:h-[6rem] 3xl:h-[6.5rem] 4xl:h-[7rem]"
+          className="h-14 object-contain lg:h-[5rem] xl:h-[5.5rem] 2xl:h-[6rem] 3xl:h-[6.5rem] 4xl:h-[7rem]"
           src={Logo}
           alt="logo"
         />
@@ -63,7 +63,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
       </div>
       <div
         className={`fixed z-10 top-[56px] w-screen font-poppins text-subTitleColor font-medium text-[16px]
-        lg:relative lg:translate-x-0 lg:top-0
+        lg:relative lg:translate-x-0 lg:top-0 
         ${!nav ? " menuClose" : " menuOpen"}`}
       >
         <ul
