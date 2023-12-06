@@ -21,7 +21,7 @@ function Modals({ nombre, calle, localidad, gps }) {
     <div className="font-heebo">
       <button
         onClick={handleOpen}
-        className="uppercase w-full rounded py-2 bg-buttonColor2 text-[0.9rem] font-bold mt-5 2xl:text-[1.14rem] hover:bg-[#322F2F]"
+        className="uppercase w-full rounded py-2 bg-hoverButton text-[0.9rem] font-bold mt-5 2xl:text-[1.14rem] hover:bg-[#494646] focus:bg-[#676565]"
       >
         ver mapa
       </button>

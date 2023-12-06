@@ -204,7 +204,7 @@ const Contacto = () => {
         <Modals open={open} setOpen={setOpen} />
         <button
           type="submit"
-          className="uppercase font-bold w-full bg-buttonColor2 hover:bg-[#322F2F] rounded py-2 mt-[-50px] 2xl:text-[1.15rem] 2xl:py-3"
+          className="uppercase font-bold w-full bg-[#322F2F] hover:bg-[#494646] focus:bg-[#676565] rounded py-2 mt-[-50px] 2xl:text-[1.15rem] 2xl:py-3"
         >
           enviar
         </button>

@@ -31,13 +31,11 @@ const Reseñas = () => {
           alt="tripadvisor logo"
         />
       </motion.div>
-        <motion.div
-          className="reseñas_carousel w-full my-5 pl-4 sm:pl-7 lg:pl-4"
-        >
-          <Carousel/>
+      <motion.div className="reseñas_carousel w-full my-5 pl-4 sm:pl-7 lg:pl-4">
+        <Carousel />
       </motion.div>
       <div className="w-full pb-6 bg-white flex justify-center lg:pb-8 2xl:pb-10 2xl:pr-16">
-        <button className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold lg:w-[400px] 2xl:py-3 hover:bg-hoverButton">
+        <button className="uppercase w-11/12 rounded bg-black text-white text-center py-2 text-[0.9rem] font-bold lg:w-[400px] 2xl:py-3 hover:bg-[#322F2F] focus:bg-[#514E4E]">
           ver todas
         </button>
       </div>
