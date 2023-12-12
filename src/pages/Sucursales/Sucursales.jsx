@@ -15,7 +15,7 @@ const Sucursales = () => {
       </Helmet>
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img
-          className="absolute bottom-[-16px] lg:bottom-[-100px] 2xl:bottom-[-200px] w-full"
+          className="absolute bottom-[-16px] md:bottom-[-100px] lg:bottom-[-150px] 2xl:bottom-[-200px] w-full"
           src={sucursales}
           alt="sabores header"
         />
@@ -45,7 +45,7 @@ const Sucursales = () => {
               </h3>
               <div className="flex flex-col gap-0 lg:flex-row">
                 <div className="w-full lg:w-[65%] my-2">
-                  <Carousels  images={images} />
+                  <Carousels images={images} />
                 </div>
                 <div className="pr-5 flex flex-col gap-2 lg:w-full lg:pl-4 lg:gap-4 xl:pl-6 2xl:gap-6 2xl:pl-8 2xl:w-[518px]">
                   <div>

@@ -7,6 +7,7 @@ import Historia from "../src/pages/Historia/Historia";
 import Sabores from "../src/pages/Sabores/Sabores";
 import Sucursales from "../src/pages/Sucursales/Sucursales";
 import Footer from "./components/Footer/Footer";
+import Error from "./pages/Error/Error"
 import { useLayoutEffect } from "react";
 import { useState } from "react";
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/historia" element={<Historia />} />
         <Route path="/sabores" element={<Sabores />} />
         <Route path="/sucursales" element={<Sucursales />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
       <Footer setActiveNav={setActiveNav} />
     </Wrapper>

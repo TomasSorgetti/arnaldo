@@ -216,6 +216,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .nav::before {
+    display: none;
     content: "";
     height: 2px;
     width: 0%;
@@ -226,8 +227,12 @@ input[type=number]::-webkit-inner-spin-button {
     transition: 300ms;
 
 }
-
-.nav.nav:hover::before {
+@media screen and (min-width:1024px) {
+    .nav::before{
+        display: block;
+    }
+}
+.dropdown:hover .nav::before {
     width: 100%;
 }
 .dropdown:hover .navDrop {
@@ -235,4 +240,9 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .navDrop:hover{
     display: flex;
+}
+
+.dropdown:hover .dropdownNavIcon{
+    --tw-rotate: 180deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }

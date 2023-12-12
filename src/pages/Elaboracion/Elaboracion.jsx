@@ -12,11 +12,13 @@ const Elaboracion = () => {
         <title>ARNALDO | Elaboración</title>
       </Helmet>
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
-        <img
-          className="object-cover w-full"
-          src={elaboracion}
-          alt="historia header"
-        />
+        <div className="h-full w-full overflow-hidden">
+          <img
+            className="object-cover h-full w-full"
+            src={elaboracion}
+            alt="historia header"
+          />
+        </div>
         <motion.h3
           variants={{
             hidden: { opacity: 0, x: -70 },

@@ -34,7 +34,7 @@ const Historia = () => {
       </Helmet>
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img
-          className="object-cover absolute bottom-0 2xl:bottom-[-60px]"
+          className="object-cover absolute bottom-0 lg:bottom-[-60px] 2xl:bottom-[-90px] 4xl:bottom-[-120px]"
           src={historia}
           alt="historia header"
         />

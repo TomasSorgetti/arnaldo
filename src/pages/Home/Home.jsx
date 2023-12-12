@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import Video from "../../assets/images/video_home/video_home_arnaldo.mp4";
 import sabores from "../../assets/images/imagenes_home/cards_home/card_home_sabores.webp";
 import sucursales from "../../assets/images/imagenes_home/cards_home/card_home_sucursales.webp";
+import sucursalesCard from "../../assets/images/imagenes_home/cards_home/Rectangle38.png";
 import historia from "../../assets/images/imagenes_home/cards_home/card_home_historia.webp";
+import historia2 from "../../assets/images/imagenes_home/cards_home/CardHomeDesktop.png";
 import ArrowIcon from "../../assets/images/iconos/iconos_cards_home/chevron_right.png";
 import Reseñas from "../../components/Reseñas/Reseñas";
 import {
@@ -16,16 +18,19 @@ const Home = () => {
       name: "SABORES",
       path: "/sabores",
       img: sabores,
+      img2: sabores,
     },
     {
       name: "SUCURSALES",
       path: "/sucursales",
       img: sucursales,
+      img2: sucursalesCard,
     },
     {
       name: "HISTORIA",
       path: "/historia",
       img: historia,
+      img2: historia2,
     },
   ];
   return (
@@ -68,8 +73,15 @@ const Home = () => {
             <img
               src={page.img}
               alt={page.name}
-              className="object-cover w-full absolute bottom-0"
+              className="object-cover w-full absolute bottom-0 lg:hidden"
             />
+            {page.img2 && (
+              <img
+                src={page.img2}
+                alt={page.name}
+                className="hidden lg:block object-cover w-full absolute bottom-0"
+              />
+            )}
             <div className="flex absolute left-0 bottom-0 items-center w-full p-4 justify-between lg:px-8 2xl:pl-16">
               <motion.h3
                 variants={{

@@ -64,7 +64,11 @@ const Contacto = () => {
         <title>ARNALDO | Contacto</title>
       </Helmet>
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
-        <img src={contact} alt="sabores header" />
+        <img
+          className="absolute sm:bottom-[-70px] md:bottom-[-100px] lg:bottom-[-110px] xl:bottom-[-200px] 3xl:bottom-[-250px] w-full"
+          src={contact}
+          alt="sabores header"
+        />
         <motion.h3
           variants={{
             hidden: { opacity: 0, x: -70 },

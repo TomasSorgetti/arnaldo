@@ -91,7 +91,12 @@ const Navigation = ({ activeNav, setActiveNav }) => {
             >
               <p className="lg:w-[200px] font-semibold">NUESTRO HELADO</p>
               <img
-                className={`h-4 ${dropdown ? "rotate-180" : ""}`}
+                className={`lg:hidden h-4 ${dropdown ? "rotate-180" : ""}`}
+                src={iconDown}
+                alt="icon down"
+              />
+              <img
+                className={`dropdownNavIcon hidden lg:block h-4`}
                 src={iconDown}
                 alt="icon down"
               />
