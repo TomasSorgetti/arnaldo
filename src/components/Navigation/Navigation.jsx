@@ -33,7 +33,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
       }`}
     >
       <Link
-        className="pl-3 sm:pl-5 lg:pl-8 xl:pl-12 2xl:pl-[74px]"
+        className="pl-3 sm:pl-5 lg:pl-6 xl:pl-8 2xl:pl-16"
         onClick={() => handleClickNavigate("/")}
         to="/"
       >

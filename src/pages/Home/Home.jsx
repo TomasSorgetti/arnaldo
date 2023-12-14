@@ -52,7 +52,7 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.6, delay: 0.45 }}
-        className="p-4 lg:px-8 2xl:p-16"
+        className="p-4 lg:px-8 lg:py-8 2xl:p-16"
       >
         <h2 className="text-[1.3rem] uppercase semism:text-[1.5rem] font-extrabold lg:text-[2.5rem] 2xl:text-[3.65rem]">
           LA TRADICIÓN EN HELADOS
