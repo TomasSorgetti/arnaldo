@@ -31,7 +31,10 @@ function Modals({ nombre, calle, localidad, gps }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="w-11/12">
+        <Box
+          sx={style}
+          className="overflow-hidden w-11/12 lg:w-10/12 xl:w-9/12"
+        >
           <button
             onClick={handleClose}
             className="absolute top-3 right-4 lg:top-6 lg:right-6"
@@ -60,7 +63,7 @@ function Modals({ nombre, calle, localidad, gps }) {
           </Typography>
           <iframe
             src={gps}
-            className="w-full h-[613px]"
+            className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[460px] xl:h-[500px] 2xl:h-[560px] 3xl:h-[640px] 4xl:h-[700px]"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
