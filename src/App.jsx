@@ -21,11 +21,8 @@ const Wrapper = ({ children }) => {
   return children;
 };
 function App() {
-  const [activeNav, setActiveNav] = useState(window.location.pathname);
-
   return (
     <Wrapper>
-      <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contacto" element={<Contacto />} />
@@ -35,7 +32,6 @@ function App() {
         <Route path="/sucursales" element={<Sucursales />} />
         <Route path="/*" element={<Error />} />
       </Routes>
-      <Footer setActiveNav={setActiveNav} />
     </Wrapper>
   );
 }

@@ -9,29 +9,29 @@ const Carousel = () => {
       const arr = [];
       cards?.map((card,index) => {
         arr.push(
-            <div
-              key={index}
-              onDragStart={handleDragStart}
-              role="presentation"
-              className="mb-5 w-[330px] h-[260px] border-[1px] shadow-xl rounded-[25px] 2xl:w-[419px] 2xl:h-[334px]"
-            >
-              <div className="flex items-center gap-2 p-6 ">
-                <img
-                  className="w-auto h-4"
-                  src={greenBalls}
-                  alt="icon tripadvisor"
-                />
-                <span className="text-xs">{card.date}</span>
-              </div>
-              <div className="px-6 h-[140px] flex flex-col gap-2 2xl:gap-6">
-                <h5 className="text-xl font-normal lg:text-[1.2rem] 2xl:text-[1.5rem]">
-                  {card.name}
-                </h5>
-                <p className="text-base font-normal lg:text-[1.1rem] 2xl:text-[1.3rem]">
-                  {card.text}
-                </p>
-              </div>
+          <div
+            key={index}
+            onDragStart={handleDragStart}
+            role="presentation"
+            className="mb-5 w-[330px] h-[260px] border-[1px] shadow-xl rounded-[25px] 2xl:w-[419px] 2xl:h-[334px]"
+          >
+            <div className="flex items-center gap-2 p-6 ">
+              <img
+                className="w-auto h-4"
+                src={greenBalls}
+                alt="icon tripadvisor"
+              />
+              <span className="text-xs">{card.date}</span>
             </div>
+            <div className="px-6 h-[140px] flex flex-col gap-2 2xl:gap-6">
+              <h5 className="text-xl font-normal lg:text-[1.2rem] 2xl:text-[1.5rem]">
+                {card.name}
+              </h5>
+              <p className="text-base font-normal leading-8 lg:text-[1.1rem] 2xl:text-[1.3rem]">
+                {card.text}
+              </p>
+            </div>
+          </div>
         );
       });
       setItems(arr);

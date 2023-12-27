@@ -232,6 +232,9 @@ input[type=number]::-webkit-inner-spin-button {
         display: block;
     }
 }
+.navLink:hover .nav::before {
+    width: 100%;
+}
 .dropdown:hover .nav::before {
     width: 100%;
 }

@@ -3,11 +3,15 @@ import { useState } from "react";
 import Modals from "./Modals";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import Footer from "../../components/Footer/Footer";
+import Navigation from "../../components/Navigation/Navigation";
 
 
 
 
 const Contacto = () => {
+  const [activeNav, setActiveNav] = useState(window.location.pathname);
+
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
@@ -63,6 +67,8 @@ const Contacto = () => {
         <meta charSet="utf-8" />
         <title>ARNALDO | Contacto</title>
       </Helmet>
+      <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
+
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img
           className="absolute sm:bottom-[-70px] md:bottom-[-100px] lg:bottom-[-110px] xl:bottom-[-200px] 3xl:bottom-[-250px] w-full"
@@ -213,6 +219,7 @@ const Contacto = () => {
           enviar
         </button>
       </motion.form>
+      <Footer />
     </section>
   );
 };

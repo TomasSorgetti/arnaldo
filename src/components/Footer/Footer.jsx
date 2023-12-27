@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import HeladoLogo from "../../assets/images/logo/imagotipo_sin_fondo.png";
 
-const Footer = ({ setActiveNav }) => {
+const Footer = () => {
   const reloadPage = (prop) => {
-    setActiveNav(prop)
     if (window.location.pathname === prop) {
       document.documentElement.scrollTo(0, 0);
     }

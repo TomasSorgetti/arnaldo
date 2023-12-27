@@ -7,9 +7,13 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import Footer from "../../components/Footer/Footer";
+import Navigation from "../../components/Navigation/Navigation";
+import { useState } from "react";
 
 const Historia = () => {
   const handleDragStart = (e) => e.preventDefault();
+  const [activeNav, setActiveNav] = useState(window.location.pathname);
 
   const items = [
     <img
@@ -32,6 +36,8 @@ const Historia = () => {
         <meta charSet="utf-8" />
         <title>ARNALDO | Historia</title>
       </Helmet>
+      <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
+
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img
           className="object-cover absolute bottom-0 lg:bottom-[-60px] 2xl:bottom-[-90px] 4xl:bottom-[-120px]"
@@ -265,6 +271,7 @@ const Historia = () => {
           />
         </motion.article>
       </section>
+      <Footer />
     </section>
   );
 };

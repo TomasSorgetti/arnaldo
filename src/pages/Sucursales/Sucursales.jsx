@@ -4,15 +4,22 @@ import Modals from "./Modals";
 import Carousels from "./Carousels";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import Footer from "../../components/Footer/Footer";
+import Navigation from "../../components/Navigation/Navigation";
+import { useState } from "react";
 
 
 const Sucursales = () => {
+  const [activeNav, setActiveNav] = useState(window.location.pathname);
+
   return (
     <section className="pt-[3.5rem] lg:pt-[100px] border-b-2 border-white pb-3 font-heebo lg:pb-12">
       <Helmet>
         <meta charSet="utf-8" />
         <title>ARNALDO | Sucursales</title>
       </Helmet>
+      <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
+
       <article className="relative h-[132px] sm:h-[180px] md:h-[220px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img
           className="absolute bottom-[-16px] md:bottom-[-100px] lg:bottom-[-150px] 2xl:bottom-[-200px] w-full"
@@ -79,6 +86,7 @@ const Sucursales = () => {
           )
         )}
       </article>
+      <Footer />
     </section>
   );
 };

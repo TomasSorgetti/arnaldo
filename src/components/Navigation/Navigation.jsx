@@ -28,7 +28,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
   };
   return (
     <nav
-      className={`fixed font-heebo flex items-center justify-between z-10 bg-black w-full lg:h-[100px] ${
+      className={`fixed font-heebo flex items-center justify-between z-10 bg-black w-full lg:h-[100px] top-0 ${
         nav ? "fixed" : ""
       }`}
     >
@@ -70,7 +70,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
           className={`w-full h-screen text-[1.25rem] font-normal bg-black text-white flex items-start px-4 flex-col justify-start gap-2 lg:flex-row lg:justify-center lg:h-[85px] lg:items-center lg:text-center lg:gap-6 lg:px-8
           ${nav ? "border-t-2 border-white" : ""}`}
         >
-          <li className="w-full font-semibold border-b py-3 lg:border-none">
+          <li className="navLink w-full font-semibold border-b py-3 lg:border-none">
             <Link
               className={`nav ${activeNav === "/" ? "before:w-full" : ""}`}
               onClick={() => handleClickNavigate("/")}
@@ -103,7 +103,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
             </button>
             <ul
               className={`navDrop flex flex-col gap-1 pl-3 py-3 text-[1rem] font-normal lg:absolute lg:text-center lg:bg-black lg:p-0 lg:w-[220px] lg:h-[120px] lg:bottom-[-123px] lg:left-[-10px]  2xl:w-[275px] 2xl:h-[175px] 2xl:bottom-[-175px] 2xl:left-[-30px] lg:justify-between lg:hidden 3xl:bottom-[-175px] ${
-                !dropdown ? "hidden lg:flex" : ""
+                !dropdown ? "hidden lg:flex" : "block"
               }`}
             >
               <Link
@@ -123,7 +123,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
               </Link>
             </ul>
           </li>
-          <li className="w-full border-b py-3 lg:border-none font-semibold">
+          <li className="navLink w-full border-b py-3 lg:border-none font-semibold">
             <Link
               className={`nav ${
                 activeNav === "/sucursales" ? "before:w-full" : ""
@@ -134,7 +134,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
               SUCURSALES
             </Link>
           </li>
-          <li className="w-full border-b py-3 lg:border-none font-semibold">
+          <li className="navLink w-full border-b py-3 lg:border-none font-semibold">
             <Link
               className={`nav ${
                 activeNav === "/historia" ? "before:w-full" : ""
@@ -145,7 +145,7 @@ const Navigation = ({ activeNav, setActiveNav }) => {
               HISTORIA
             </Link>
           </li>
-          <li className="w-full border-b py-3 lg:border-none font-semibold">
+          <li className="navLink w-full border-b py-3 lg:border-none font-semibold">
             <Link
               className={`nav ${
                 activeNav === "/contacto" ? "before:w-full" : ""

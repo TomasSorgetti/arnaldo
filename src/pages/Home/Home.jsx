@@ -11,8 +11,13 @@ import {
   motion,
 } from "framer-motion";
 import { Helmet } from "react-helmet";
+import Footer from "../../components/Footer/Footer";
+import Navigation from "../../components/Navigation/Navigation";
+import { useState } from "react";
 
 const Home = () => {
+  const [activeNav, setActiveNav] = useState(window.location.pathname);
+
   const pages = [
     {
       name: "SABORES",
@@ -39,6 +44,8 @@ const Home = () => {
         <meta charSet="utf-8" />
         <title>ARNALDO | Home</title>
       </Helmet>
+      <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
+
       <article className="w-full lg:h-[500px] xl:h-[700px] 3xl:h-[800px] 4xl:h-[900px] overflow-hidden flex justify-center items-center">
         <video autoPlay muted className="object-cover">
           <source src={Video} type="video/mp4"></source>
@@ -105,6 +112,7 @@ const Home = () => {
         ))}
       </section>
       <Reseñas />
+      <Footer />
     </main>
   );
 };
