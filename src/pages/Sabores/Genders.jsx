@@ -56,7 +56,7 @@ const Genders = () => {
             <button
               onClick={() => handleClick(gender)}
               className={`h-10 w-auto text-[0.9rem] uppercase rounded-full px-5 py-2 2xl:text-[1.14rem] ${
-                active === gender ? `bg-white text-black` : "bg-buttonColor"
+                active === gender ? `bg-white text-black` : "bg-buttonColor "
               }`}
               key={index}
             >
@@ -72,7 +72,9 @@ const Genders = () => {
             <button
               onClick={() => handleClick(gender)}
               className={`h-10 w-auto text-[0.9rem] uppercase rounded-full px-5 py-2 ${
-                active === gender ? `bg-white text-black` : "bg-buttonColor"
+                active === gender
+                  ? `bg-white text-black font-semibold`
+                  : "bg-buttonColor hover:bg-[#494646] focus:bg-[#676565]"
               }`}
               key={index}
             >
