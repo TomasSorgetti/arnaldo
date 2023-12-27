@@ -118,7 +118,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`rounded placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 focus:outline-none lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
+            className={`rounded focus:placeholder:text-black placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 focus:outline-none lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
               submited && form.nombre === ""
                 ? "border-redError"
                 : "border-white"
@@ -142,7 +142,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className="rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black border-white border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6"
+            className="rounded focus:placeholder:text-black focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black border-white border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6"
             type="text"
             placeholder="Ingrese el nombre de su empresa (opcional)"
             name="empresa"
@@ -155,7 +155,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
+            className={`rounded focus:placeholder:text-black focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
               submited && form.email === "" ? "border-redError" : "border-white"
             }`}
             type="text"
@@ -177,7 +177,7 @@ const Contacto = () => {
           </label>
           <input
             onChange={handleChange}
-            className={`rounded focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
+            className={`rounded focus:placeholder:text-black focus:outline-none placeholder:text-[0.8rem] w-full h-[46px] bg-black  border px-2 focus:border-2 lg:h-[60px] lg:placeholder:text-[1rem] lg:px-4 2xl:h-[99px] 2xl:placeholder:text-[1.5rem] 2xl:px-6 ${
               submited && form.cel === "" ? "border-redError" : "border-white"
             }`}
             type="number"
@@ -196,7 +196,7 @@ const Contacto = () => {
         <div className="relative">
           <textarea
             onChange={handleChange}
-            className={`rounded focus:outline-none focus:bg-white placeholder:text-black placeholder:font-medium w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 lg:p-4 lg:placeholder:text-[1rem] 2xl:placeholder:text-[1.5rem] 2xl:h-[321px] ${
+            className={`rounded focus:placeholder:text-white focus:outline-none focus:bg-white placeholder:text-black placeholder:font-medium w-full h-[150px] px-3 py-1 text-black bg-textAreaBg  border focus:border-2 lg:p-4 lg:placeholder:text-[1rem] 2xl:placeholder:text-[1.5rem] 2xl:h-[321px] ${
               submited && form.msg === "" ? "border-redError" : "border-white"
             }`}
             name="msg"

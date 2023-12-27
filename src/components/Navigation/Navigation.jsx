@@ -101,13 +101,15 @@ const Navigation = ({ activeNav, setActiveNav }) => {
                 alt="icon down"
               />
             </button>
-            <ul
-              className={`navDrop flex flex-col gap-1 pl-3 py-3 text-[1rem] font-normal lg:absolute lg:text-center lg:bg-black lg:p-0 lg:w-[220px] lg:h-[120px] lg:bottom-[-123px] lg:left-[-10px]  2xl:w-[275px] 2xl:h-[175px] 2xl:bottom-[-175px] 2xl:left-[-30px] lg:justify-between lg:hidden 3xl:bottom-[-175px] ${
-                !dropdown ? "hidden lg:flex" : "block"
+            <div
+              className={`navDrop flex flex-col gap-4 pl-3 text-[1rem] font-normal lg:absolute lg:text-center lg:bg-black lg:p-0 lg:w-[220px] lg:h-[120px] lg:bottom-[-123px] lg:left-[-10px]  2xl:w-[275px] 2xl:h-[175px] 2xl:bottom-[-175px] 2xl:left-[-30px] lg:justify-between lg:hidden 3xl:bottom-[-175px] ${
+                !dropdown ? "hidden lg:flex" : "py-3 block"
               }`}
             >
               <Link
-                className="uppercase lg:h-full lg:flex justify-center items-center lg:pt-4"
+                className={`uppercase lg:h-full lg:flex justify-center items-center lg:pt-4 ${
+                  !dropdown ? "none hidden " : "block"
+                }`}
                 onClick={() => handleClickNavigate("/sabores")}
                 to="/sabores"
               >
@@ -115,13 +117,15 @@ const Navigation = ({ activeNav, setActiveNav }) => {
               </Link>
               <div className="hidden lg:block h-1 w-full bg-white"></div>
               <Link
-                className="uppercase lg:h-full lg:flex justify-center items-center"
+                className={`uppercase lg:h-full lg:flex justify-center items-center ${
+                  !dropdown ? "hidden" : "block"
+                }`}
                 onClick={() => handleClickNavigate("/elaboracion")}
                 to="/elaboracion"
               >
                 Elaboración
               </Link>
-            </ul>
+            </div>
           </li>
           <li className="navLink w-full border-b py-3 lg:border-none font-semibold">
             <Link

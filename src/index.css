@@ -120,13 +120,17 @@ input[type=number]::-webkit-inner-spin-button {
             display: block;
             position: absolute;
             top: 35%;
-            left: 0;
+            left: 10px;
         }
         .alice-carousel__prev-btn-wrapper {
             text-align: left;
         }
         .alice-carousel__prev-btn-item {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            color: white;
+        }
+        .alice-carousel__prev-btn-item:hover {
+            font-weight: 500;
             color: white;
         }
         .alice-carousel__prev-btn-item .__inactive {
@@ -138,13 +142,17 @@ input[type=number]::-webkit-inner-spin-button {
             display: block;
             position: absolute;
             top: 35%;
-            right: 0;
+            right: 10px;
         }
         .alice-carousel__next-btn-wrapper {
             text-align: right;
         }
         .alice-carousel__next-btn-item {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            color: white;
+        }
+        .alice-carousel__next-btn-item:hover {
+            font-weight: 500;
             color: white;
         }
         .alice-carousel__next-btn-item .__inactive {
@@ -193,6 +201,14 @@ input[type=number]::-webkit-inner-spin-button {
             background-color: transparent;
             box-shadow: none;
         }
+}
+@media screen and (min-width:1280px) {
+    .alice-carousel__prev-btn{
+        top: 38%;
+    }
+    .alice-carousel__next-btn{
+        top: 38%;
+    }
 }
 @media screen and (min-width:1440px) {
     .reseñas_carousel .alice-carousel__next-btn,

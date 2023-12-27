@@ -7,21 +7,23 @@ const Error = () => {
   const [activeNav, setActiveNav] = useState(window.location.pathname);
 
   return (
-    <div>
+    <div className="font-heebo">
       <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col gap-8 items-center text-center">
         <img
-          className="mt-24 mb-10 w-11/12 sm:w-9/12 lg:w-5/12 lg:mt-40 xl:w-4/12"
+          className="mt-24 mb-10 w-10/12 sm:w-9/12 lg:w-5/12 lg:mt-32 xl:w-4/12"
           src={errorImage}
           alt="error image presentation"
         />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          suscipit fugiat excepturi accusamus recusandae tenetur magni ducimus
-          iusto pariatur dolorum porro perferendis minus, dolor nemo eaque
-          neque, aut, natus provident.
+        <p className="text-[1rem] md:text-[1.2rem] w-10/12">
+          Parece que la página que estás buscando no se encuentra disponible
         </p>
-        <Link to="/">Inicio</Link>
+        <Link
+          className="text-[1rem] md:text-[1.2rem] uppercase py-2 px-8 border-2 border-white rounded-md font-bold"
+          to="/"
+        >
+          Volver al inicio
+        </Link>
       </div>
     </div>
   );
