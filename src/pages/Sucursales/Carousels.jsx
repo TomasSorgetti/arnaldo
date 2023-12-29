@@ -8,7 +8,7 @@ const Carousels = ({ images }) => {
     const arr = [];
     images?.map((image) => {
       arr.push(
-        <div className="overflow-hidden w-[360px] sm:w-[640px] md:w-[768px] lg:w-[630px] xl:w-[800px] 2xl:w-[850px] 3xl:w-[1000px] 4xl:w-[1200px]">
+        <div className="overflow-hidden w-full ">
           <img
             className="w-full object-cover"
             src={image}

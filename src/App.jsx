@@ -1,4 +1,3 @@
-import Navigation from "./components/Navigation/Navigation"
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "../src/pages/Home/Home"
 import Contacto from "../src/pages/Contacto/Contacto";
@@ -6,10 +5,8 @@ import Elaboracion from "../src/pages/Elaboracion/Elaboracion";
 import Historia from "../src/pages/Historia/Historia";
 import Sabores from "../src/pages/Sabores/Sabores";
 import Sucursales from "../src/pages/Sucursales/Sucursales";
-import Footer from "./components/Footer/Footer";
 import Error from "./pages/Error/Error"
 import { useLayoutEffect } from "react";
-import { useState } from "react";
 
 
 const Wrapper = ({ children }) => {

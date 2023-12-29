@@ -1,9 +1,9 @@
 import historia from "../../assets/images/imagenes_home/cards_home/card_home_historia.webp";
+import headerHistoria from "../../assets/images/imagenes_historia/headerHistoria.png";
 import empresa from "../../assets/images/imagenes_historia/empresa.webp";
 import marca from "../../assets/images/imagenes_historia/marca.webp";
 import marca2 from "../../assets/images/imagenes_historia/marca2.webp";
 import arnaldo from "../../assets/images/imagenes_historia/arnaldo.webp";
-import headerHistoria from "../../assets/images/imagenes_historia/headerHistoria.png"
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { motion } from "framer-motion";
@@ -39,10 +39,15 @@ const Historia = () => {
       </Helmet>
       <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
 
-      <article className="relative h-[132px] sm:h-[200px] md:h-[240px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
+      <article className=" relative h-[132px] sm:h-[200px] md:h-[240px] lg:h-[300px] xl:h-[340px] overflow-hidden 2xl:h-[370px] 3xl:h-[430px] 4xl:h-[460px]">
         <img
-          className="object-cover absolute bottom-0 sm:bottom-[-30px] md:bottom-[-40px] lg:bottom-[-70px] xl:bottom-[-80px] 2xl:bottom-[-110px]"
+          className="object-cover absolute bottom-0 sm:bottom-[-30px] md:bottom-[-40px] lg:hidden"
           src={historia}
+          alt="historia header"
+        />
+        <img
+          className="object-cover hidden lg:block w-full absolute bottom-0"
+          src={headerHistoria}
           alt="historia header"
         />
         <motion.h3

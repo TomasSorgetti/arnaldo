@@ -7,7 +7,7 @@ const Error = () => {
   const [activeNav, setActiveNav] = useState(window.location.pathname);
 
   return (
-    <div className="font-heebo">
+    <div className="font-heebo h-[100svh] flex flex-col justify-between">
       <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
       <div className="flex flex-col gap-8 items-center text-center">
         <img
