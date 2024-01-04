@@ -75,7 +75,7 @@ const Home = () => {
           <Link
             to={page.path}
             key={index}
-            className="relative h-[180px] w-full overflow-hidden sm:h-[230px] md:h-[260px] lg:h-[350px] 2xl:h-[500px]"
+            className="home_card relative h-[180px] w-full overflow-hidden sm:h-[230px] md:h-[260px] lg:h-[350px] 2xl:h-[500px]"
           >
             <img
               src={page.img}
@@ -103,7 +103,7 @@ const Home = () => {
                 {page.name}
               </motion.h3>
               <img
-                className="h-10 lg:h-[60px] 2xl:h-[80px] 2xl:pr-10"
+                className="arrow_icon h-10 lg:h-[60px] 2xl:h-[80px] 2xl:pr-10"
                 src={ArrowIcon}
                 alt="arrow icon"
               />

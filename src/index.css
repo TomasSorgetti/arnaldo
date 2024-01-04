@@ -57,6 +57,15 @@ input[type=number]::-webkit-inner-spin-button {
     background-image: url("./assets/images/logo/logoPositivo.png");
 } */
 
+/********** Home Cards ***********/
+.home_card:hover {
+    filter: brightness(1.2);
+}
+.home_card:hover .arrow_icon{
+    transform: translateX(16px);
+    transition: 1s;
+}
+
 #modal-modal-title{
     font-size: 0.875rem;
     font-weight: 700;
